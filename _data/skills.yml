@@ -1,0 +1,90 @@
+- name: Web
+  skills:
+    - class: html5-plain
+      skill_name: HTML5
+    - class: css3-plain
+      skill_name: CSS3
+    - class: bootstrap-plain
+      skill_name: Bootstrap
+    - class: jquery-plain
+      skill_name: jQuery
+    - class: mapbox-plain
+      skill_name: MapboxGL.js
+    - class: mapbox-plain
+      skill_name: Mapbox.js
+    - class: leaflet-plain
+      skill_name: Leaflet
+
+- name: Languages
+  skills:
+    - class: javascript-plain
+      skill_name: JavaScript
+    - class: java-plain
+      skill_name: java
+    - class: python-plain
+      skill_name: python
+
+- name: Databases
+  skills:
+    - class: postgresql-plain
+      skill_name: Postgresql
+    - class: mongodb-plain
+      skill_name: MongoDB
+
+- name: Frontend frameworks
+  skills:
+    - class: jekyll-plain
+      skill_name: Jekyll
+
+- name: Backend frameworks
+  skills:
+    - class: nodejs-plain
+      skill_name: NodeJS
+    - class: hapi-plain
+      skill_name: Hapi.js
+    - class: express-original
+      skill_name: Express
+
+- name: Devops
+  skills:
+    - class: git-plain
+      skill_name: Git
+    - class: github-plain
+      skill_name: GitHub
+    - class: aws-original
+      skill_name: AWS
+    - class: docker-plain
+      skill_name: Docker
+    - class: kubernetes-plain
+      skill_name: Kubernetes
+
+- name: Cloud
+  skills:
+    - class: aws-plain
+      skill_name: AWS
+    - class: azure-plain
+      skill_name: azure
+
+- name: Data processing
+  skills:
+    - class: qgis-plain
+      skill_name: QGIS
+
+- name: Data Visualization
+  skills:
+    - class: mapbox-plain
+      skill_name: Mapbox Studio
+
+- name: Mapping
+  skills:
+    - class: osm-plain
+      skill_name: OpenStreetMap
+
+- name: Testing
+  skills:
+    - class: mocha-plain
+      skill_name: Mocha
+    - class: jasmine-plain
+      skill_name: Jasmine
+    - class: rspec-plain
+      skill_name: RSpec

@@ -1,37 +1,39 @@
-## Welcome to GitHub Pages
+# rub21.github.io
+Personal portfolio page!
 
-You can use the [editor on GitHub](https://github.com/Rub21/rub21.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+To get started: 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Make sure Ruby is installed on your computer, for detailed information on how check this link https://www.ruby-lang.org/en/documentation/installation/
 
-### Markdown
+1) clone the repo by running in your bash terminal/cmd, make sure to change url below to url of your own fork.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+git clone https://github.com/Rub21/rub21.github.io.git
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+2) go into the folder with 
+```
+cd rub21.github.io
+```
 
-### Jekyll Themes
+3) run 
+```
+bundle install
+``` 
+  to install all the necessary gems(those are ruby libraries)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Rub21/rub21.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+4) run 
+```
+bundle exec jekyll serve
+``` 
+  this will start jekyll which will regenerate your html every time you make a change. You should now be able to navigate to http://localhost:4000 and see the site.
 
-### Support or Contact
+5) finally open a new terminal window and run 
+```
+bash sass_watch.sh
+```
+  This will start sass and compile various sass files into css.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Now that you're up and running try changing _config.yml such as email title, linkedin url etc, restart jekyll and see your changes. 
+
+For more info on how to use jekyll visit https://jekyllrb.com/docs/home/

@@ -1,0 +1,13 @@
+<div class="col s12 m4">
+  <div class="card">
+    <div class="card-image">
+      <img src="{{project.cover}}">
+    </div>
+    <h5>&nbsp; {{project.title}}</h5>
+    <!-- <span>&nbsp; {{project.date}}</span> -->
+    <div class="card-action">
+      <button class="fill modal-trigger" href="#{{project.id}}">learn more</button>
+    </div>
+    {% include project_modal.html %}
+  </div>
+</div>
