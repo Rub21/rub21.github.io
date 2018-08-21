@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  'Hacking INEI data'
+title:  'geojson2osm'
 live_url: https://www.npmjs.com/package/geojson2osm
 github_url: https://github.com/Rub21/get-inei-data
 description: <p>Node CLI tool to convert geojson files into osm files, Helpful to import data into OpenStreetMap.</p>
