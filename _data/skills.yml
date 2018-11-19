@@ -1,5 +1,7 @@
 - name: Web
   skills:
+    - class: react-plain
+      skill_name: React
     - class: html5-plain
       skill_name: HTML5
     - class: css3-plain
@@ -14,8 +16,10 @@
       skill_name: Mapbox.js
     - class: leaflet-plain
       skill_name: Leaflet
+    - class: redux-plain
+      skill_name: Redux
 
-- name: Languages
+- name: Programing languages
   skills:
     - class: javascript-plain
       skill_name: JavaScript
@@ -51,8 +55,6 @@
       skill_name: Git
     - class: github-plain
       skill_name: GitHub
-    - class: aws-original
-      skill_name: AWS
     - class: docker-plain
       skill_name: Docker
     - class: kubernetes-plain
@@ -60,15 +62,19 @@
 
 - name: Cloud
   skills:
-    - class: aws-plain
+    - class: amazon-plain
       skill_name: AWS
     - class: azure-plain
       skill_name: azure
+    - class: google-plain
+      skill_name: Google Cloud Platform
 
 - name: Data processing
   skills:
     - class: qgis-plain
       skill_name: QGIS
+    - class: ArcGIS-plain
+      skill_name: ArcGIS
 
 - name: Data Visualization
   skills:
