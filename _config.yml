@@ -47,3 +47,5 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  
+exclude: [vendor]
