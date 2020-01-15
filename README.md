@@ -1,39 +1,28 @@
-# rub21.github.io
-Personal portfolio page!
+# CBIT platform
 
-To get started: 
+Cbit-platform is a website to display GHG measurement charts and contents, the data is obtained from the Kenya Government.
 
-Make sure Ruby is installed on your computer, for detailed information on how check this link https://www.ruby-lang.org/en/documentation/installation/
+## Local development
 
-1) clone the repo by running in your bash terminal/cmd, make sure to change url below to url of your own fork.
+This add was build using the [create-react-app](https://github.com/facebook/create-react-app)
 
-```
-git clone https://github.com/Rub21/rub21.github.io.git
-```
-
-2) go into the folder with 
-```
-cd rub21.github.io
+```sh
+yarn install
+yarn start
 ```
 
-3) run 
-```
-bundle install
-``` 
-  to install all the necessary gems(those are ruby libraries)
+## Production deployment
 
-4) run 
-```
-bundle exec jekyll serve
-``` 
-  this will start jekyll which will regenerate your html every time you make a change. You should now be able to navigate to http://localhost:4000 and see the site.
+All commit to Master will be deploy automatically by CirclerCI, but also a manual deployment can be done by running:
 
-5) finally open a new terminal window and run 
+```sh
+yarn run deploy
 ```
-bash sass_watch.sh
-```
-  This will start sass and compile various sass files into css.
 
-Now that you're up and running try changing _config.yml such as email title, linkedin url etc, restart jekyll and see your changes. 
+## Update the information
 
-For more info on how to use jekyll visit https://jekyllrb.com/docs/home/
+https://github.com/developmentseed/cbit-platform/blob/master/cbit-data/README.md
+
+### Edit contents for the dashboard
+
+All the content in the folder [content](https://github.com/developmentseed/cbit-platform/tree/master/cbit-data/content) are editable instruction here: https://github.com/developmentseed/cbit-platform/wiki/Editing-content-for-KENYA-GHG-EMISSIONS-DASHBOARD

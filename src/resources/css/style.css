@@ -1,0 +1,21 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", "Helvetica", "Arial", sans-serif !important;
+  color: #1f2932;
+}
+h1 {
+  font-weight: 700;
+  line-height: 1.15;
+  position: relative;
+  margin-bottom: 2rem;
+}
+h1::after {
+  border-bottom: 4px solid #1f2932;
+  width: 100%;
+  content: '';
+  bottom: -1rem;
+  left: 0;
+  position: absolute;
+}
+h2, h3, h4, h5, h6 {
+  font-weight: 200 !important;
+}
