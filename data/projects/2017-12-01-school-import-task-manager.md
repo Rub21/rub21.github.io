@@ -10,6 +10,6 @@ images: [
                 'https://wiki.openstreetmap.org/w/images/c/cb/4vdsfds.gif',
                 'https://wiki.openstreetmap.org/w/images/b/b0/5dsvdssdf.gif'
         ]
-owner: "[Rub21](https://www.rub21.com)"
+owner: "By [Rub21](https://www.rub21.com)"
 ---
 Website to handle the school import process by the Peru-osm community.

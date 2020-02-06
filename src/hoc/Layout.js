@@ -10,8 +10,8 @@ import {
   Grid
 } from "@material-ui/core";
 import { compose } from "recompose";
-import purple from '@material-ui/core/colors/purple';
-import amber from '@material-ui/core/colors/amber';
+import purple from "@material-ui/core/colors/purple";
+import amber from "@material-ui/core/colors/amber";
 
 import HeaderVertical from "../components/Helpers/HeaderVertical";
 import HeaderHorizontal from "../components/Helpers/HeaderHorizontal";
@@ -59,7 +59,7 @@ const styles = {
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: '#1f2932',
+    backgroundColor: "#1f2932",
     color: "white",
     flex: "1",
     boxShadow: "10px 0 20px rgba(40,40,100,.12)"

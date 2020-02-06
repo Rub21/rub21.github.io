@@ -8,6 +8,6 @@ cover: https://user-images.githubusercontent.com/1152236/41137566-600e5e9c-6aa1-
 images: [
                 'https://user-images.githubusercontent.com/1152236/41137566-600e5e9c-6aa1-11e8-945e-fd25663e5dba.png'
         ]
-owner: "[Mapbox](https://www.mapbox.com)"
+owner: "By [Mapbox](https://www.mapbox.com)"
 ---
 Node CLI tool to convert geojson files into osm files, Helpful to import data into OpenStreetMap.

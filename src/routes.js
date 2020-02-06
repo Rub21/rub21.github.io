@@ -8,7 +8,9 @@ import Page404 from "./components/Page404";
 import Projects from "./components/Projects";
 import Resume from "./components/Resume";
 
-{/* <BrowserRouter basename={"/rub21.com"}> */ }
+{
+  /* <BrowserRouter basename={"/rub21.com"}> */
+}
 
 class Routes extends Component {
   render() {

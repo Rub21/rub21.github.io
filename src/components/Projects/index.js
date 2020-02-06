@@ -10,14 +10,17 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
 import { withStyles } from "@material-ui/styles";
 import projects from "./../../data/projects.json";
 import Box from '@material-ui/core/Box';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import ReactPlayer from 'react-player'
+
 
 const style = {
- 
+
 };
 
 const md = new MarkdownIt();
@@ -40,8 +43,8 @@ class Projects extends Component {
         {projects.map(project =>
           <Card style={{ margin: '5px' }}>
             <CardHeader
-              // title={project.title}
-              subheader={project.title}
+              title={project.title}
+              // subheader={project.title}
             />
             <CardContent>
               <Grid container spacing={3}>
@@ -55,12 +58,15 @@ class Projects extends Component {
                           </div>)
                       }
                     </Carousel> :
-                    <video
-                      width='100%    !important;'
-                      height='auto   !important;' controls autoplay loop muted>
-                      <source src={project.videos[0]} type="video/mp4" />
-                      {'Your browser does not support HTML5 video.'}
-                    </video>
+                    <div className='player-wrapper'>
+                      <ReactPlayer
+                        url={project.videos[0]}
+                        className='react-player'
+                        playing
+                        width='100%'
+                        height='100%'
+                      />
+                    </div>
                   }
                 </Grid>
                 <Grid item lg={4}>
@@ -69,15 +75,18 @@ class Projects extends Component {
                       {project.live_url ? (<a href={project.live_url}>{'Alive Page'} {' | '}</a>) : ''}
                       {<a href={project.github_url}>{"Repository - Doc:"}</a>}
                     </Typography>
-                    <Typography display="block" variant="caption" color="textSecondary">
-                    </Typography>
                     <Typography variant="caption" color="textSecondary">
                       {project.technologies}
                     </Typography>
+                    <Divider/>
                     <Typography variant="caption" color="textSecondary">
                       <div style={{ textAlign: "justify" }}>{parse(md.render(project.body))}</div>
                     </Typography>
                   </Box>
+                  <Divider/>
+                  <Typography display="block" variant="caption" color="textSecondary">
+                    {parse(md.render(project.owner))}
+                    </Typography>
                 </Grid>
               </Grid>
             </CardContent>

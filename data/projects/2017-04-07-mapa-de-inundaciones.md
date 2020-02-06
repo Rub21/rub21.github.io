@@ -8,6 +8,6 @@ cover: https://user-images.githubusercontent.com/1152236/40889081-0070c822-6726-
 images: [
                 'https://user-images.githubusercontent.com/1152236/40889081-0070c822-6726-11e8-9f87-f29b22a3a4fd.gif'
       ]
-owner: "[Rub21](https://www.rub21.com)"
+owner: "By [Rub21](https://www.rub21.com)"
 ---
 A web application that allows reporting of flooded streets in Peru. Application adapted to face the Niño costero [Phenomenon crisis in 2017 in Peru.](https://es.wikipedia.org/wiki/Ni%C3%B1o_costero_(2016-2017))

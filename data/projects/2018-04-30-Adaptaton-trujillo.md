@@ -12,6 +12,6 @@ images: [
         'https://user-images.githubusercontent.com/1152236/39407664-fd28e292-4b8e-11e8-81d1-59f1af5f9ef6.png',
         'https://user-images.githubusercontent.com/11504548/39408088-aae427e6-4b96-11e8-8869-49e64375583b.gif'
         ]
-owner: "[Rub21](https://www.rub21.com)"
+owner: "By [Rub21](https://www.rub21.com)"
 ---
 A web application that allows the neighbors to report flooded streets, which are verified and validated by municipal managers, once the data was validated the application provides alternate routes for circulation, avoiding the flooded streets.
