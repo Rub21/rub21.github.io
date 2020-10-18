@@ -1,0 +1,161 @@
+{
+    "skills": [
+        {
+            "name": "Frontend frameworks",
+            "types": [
+                {
+                    "class": "devicon-react-original",
+                    "skill_name": "React"
+                },
+                {
+                    "class": "devicon-html5-plain",
+                    "skill_name": "HTML5"
+                },
+                {
+                    "class": "devicon-css3-plain",
+                    "skill_name": "CSS3"
+                },
+                {
+                    "class": "devicon-bootstrap-plain",
+                    "skill_name": "Bootstrap"
+                },
+                {
+                    "class": "devicon-jquery-plain",
+                    "skill_name": "jQuery"
+                },
+                {
+                    "skill_name": "Material-ui"
+                },
+                {
+                    "skill_name": "MapboxGL"
+                },
+                {
+                    "skill_name": "Leaflet"
+                },
+                {
+                    "skill_name": "Redux"
+                }
+            ]
+        },
+        {
+            "name": "Programing languages",
+            "types": [
+                {
+                    "class": "devicon-javascript-plain",
+                    "skill_name": "JavaScript"
+                },
+                {
+                    "class": "devicon-java-plain",
+                    "skill_name": "Java"
+                },
+                {
+                    "class": "devicon-python-plain",
+                    "skill_name": "Python"
+                }
+            ]
+        },
+        {
+            "name": "Databases",
+            "types": [
+                {
+                    "class": "devicon-postgresql-plain",
+                    "skill_name": "Postgresql"
+                },
+                {
+                    "class": "devicon-mongodb-plain",
+                    "skill_name": "MongoDB"
+                }
+            ]
+        },
+        {
+            "name": "Backend frameworks",
+            "types": [
+                {
+                    "class": "devicon-nodejs-plain",
+                    "skill_name": "NodeJS"
+                },
+                {
+                    "skill_name": "Hapi.js"
+                },
+                {
+                    "class": "devicon-express-original",
+                    "skill_name": "Express"
+                }
+            ]
+        },
+        {
+            "name": "Devops",
+            "types": [
+                {
+                    "class": "devicon-git-plain",
+                    "skill_name": "Git"
+                },
+                {
+                    "class": "devicon-github-plain",
+                    "skill_name": "GitHub"
+                },
+                {
+                    "class": "devicon-gitlab-plain",
+                    "skill_name": "GitLab"
+                },
+                {
+                    "class": "devicon-docker-plain",
+                    "skill_name": "Docker"
+                },
+                {
+                    "class": "devicon-kubernetes-plain",
+                    "skill_name": "Kubernetes"
+                }
+            ]
+        },
+        {
+            "name": "Cloud",
+            "types": [
+                {
+                    "class": "devicon-amazonwebservices-original",
+                    "skill_name": "Amazon Web Services"
+                },
+                {
+                    "class": "devicon-google-plain",
+                    "skill_name": "Google Cloud Platform"
+                }
+            ]
+        },
+        {
+            "name": "Data processing",
+            "types": [
+                {
+                    "skill_name": "QGIS"
+                },
+                {
+                    "skill_name": "ArcGIS"
+                },
+                {
+                    "skill_name": "Phyton Scripts"
+                }
+            ]
+        },
+        {
+            "name": "Mapping",
+            "types": [
+                {
+                    "skill_name": "OpenStreetMap"
+                }
+            ]
+        },
+        {
+            "name": "Testing",
+            "types": [
+                {
+                    "skill_name": "Mocha"
+                },
+                {
+                    "skill_name": "Jasmine"
+                },
+                {
+                    "skill_name": "RSpec"
+                }
+            ]
+        }
+    ]
+}
