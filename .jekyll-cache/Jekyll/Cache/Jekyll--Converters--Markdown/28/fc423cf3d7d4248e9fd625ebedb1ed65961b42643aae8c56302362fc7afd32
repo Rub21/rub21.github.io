@@ -1,0 +1,4 @@
+I"*<p>Web application for Machine Learning training data creation using Satellite images.</p>
+
+<p>The first input data come from <a href="https://github.com/developmentseed/label-maker">label-maker</a>; Relabeler helps to clean up the data and them to pass it for Machine Learning model training.</p>
+:ET

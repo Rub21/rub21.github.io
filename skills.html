@@ -1,0 +1,34 @@
+---
+layout: main
+title: Skills
+permalink: /skills/
+---
+<section class="skills">
+
+    {% for skill in site.data.skills %}
+    <div class="skill_box">
+        <div class="item">
+            <h3 class="skill_header">{{skill.category}}</h3>
+        </div>
+        <div class="item">
+            <ul class="cbp-ig-grid">
+                {% for tech in skill.list %}
+                <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+                    {% if tech.icon %}
+                    <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                        <i class="cbp-ig-icon icon-text">{{tech.icon}}</i>
+                        <h3 class="cbp-ig-title ng-binding">{{tech.skill_name}}</h3>
+                    </span>
+                    {% else %}
+                    <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                        <i class="cbp-ig-icon {{ tech.class }}"></i>
+                        <h3 class="cbp-ig-title ng-binding">{{tech.skill_name}}</h3>
+                    </span>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+</section>

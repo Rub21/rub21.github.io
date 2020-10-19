@@ -1,0 +1,33 @@
+title: Rub21
+description: ""
+permalink: ':title/'
+baseurl: "" 
+url: "rub21.com" 
+site-twitter: Rub21m
+# Author Settings
+author: Ruben LM # add your name
+author-img: rub21.jpeg # add your photo
+about-author: I am a Data analyst focusing on geographic and Machine Learning data processing, I got into programming because I love making atomize things, it is magic to see how programming can make easy the life and always hungry to keep learning.
+social-twitter: Rub21m 
+social-facebook: rub2106 
+social-github: Rub21
+social-linkedin: rub21
+social-email: ruben@developmentseed.org
+
+# Disqus
+discus-identifier: mr-brown # add your discus identifier
+
+# Tracker
+analytics: # Google Analytics
+
+# Build Settings
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+
+paginate: 10
+paginate_path: "/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
