@@ -3,9 +3,819 @@ layout: main
 title: Skills
 permalink: /skills/
 ---
-{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign tag_words = site_tags | split:',' | sort %}
+<section class="skills">
 
-<section class="blog-tags">
+    {% for skill in site.data.skills %}
+    <div class="skill_box">
+        <div class="item">
+            <h3 class="skill_header">{{skill.category}}</h3>
+        </div>
+        <div class="item">
+            <ul class="cbp-ig-grid">
+                {% for tech in skill.list %}
+                <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+                    {% if tech.icon %}
+                    <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                        <i class="cbp-ig-icon icon-text">{{tech.icon}}</i>
+                        <h3 class="cbp-ig-title ng-binding">{{tech.skill_name}}</h3>
+                    </span>
+                    {% else %}
+                    <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                        <i class="cbp-ig-icon {{ tech.class }}"></i>
+                        <h3 class="cbp-ig-title ng-binding">{{tech.skill_name}}</h3>
+                    </span>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
 
+    <!-- <ul class="cbp-ig-grid">
+        
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-amazonwebservices-original"></i>
+                <h3 class="cbp-ig-title ng-binding">amazonwebservices</h3>
+            </span>
+        </li>
+
+
+        
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-android-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">android</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-angularjs-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">angularjs</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-apache-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">apache</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-appcelerator-original"></i>
+                <h3 class="cbp-ig-title ng-binding">appcelerator</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-apple-original"></i>
+                <h3 class="cbp-ig-title ng-binding">apple</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-atom-original"></i>
+                <h3 class="cbp-ig-title ng-binding">atom</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-babel-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">babel</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-backbonejs-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">backbonejs</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-behance-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">behance</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-bitbucket-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">bitbucket</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-bootstrap-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">bootstrap</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-bower-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">bower</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-c-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">c</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-cakephp-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">cakephp</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-ceylon-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">ceylon</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-chrome-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">chrome</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-"></i>
+                <h3 class="cbp-ig-title ng-binding">clojure</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-"></i>
+                <h3 class="cbp-ig-title ng-binding">clojurescript</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-codeigniter-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">codeigniter</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-codepen-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">codepen</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-coffeescript-original"></i>
+                <h3 class="cbp-ig-title ng-binding">coffeescript</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-confluence-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">confluence</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-couchdb-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">couchdb</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-cplusplus-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">cplusplus</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-csharp-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">csharp</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-css3-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">css3</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-cucumber-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">cucumber</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-d3js-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">d3js</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-debian-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">debian</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-devicon-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">devicon</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-django-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">django</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-docker-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">docker</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-doctrine-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">doctrine</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-dot-net-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">dot-net</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-drupal-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">drupal</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-electron-original"></i>
+                <h3 class="cbp-ig-title ng-binding">electron</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-elm-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">elm</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-"></i>
+                <h3 class="cbp-ig-title ng-binding">ember</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-erlang-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">erlang</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-express-original"></i>
+                <h3 class="cbp-ig-title ng-binding">express</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-facebook-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">facebook</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-firefox-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">firefox</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-foundation-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">foundation</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-gatling-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">gatling</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-gimp-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">gimp</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-git-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">git</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-github-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">github</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-gitlab-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">gitlab</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-go-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">go</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-google-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">google</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-gradle-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">gradle</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-grails-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">grails</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-groovy-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">groovy</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-grunt-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">grunt</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-gulp-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">gulp</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-haskell-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">haskell</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-handlebars-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">handlebars</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-heroku-original"></i>
+                <h3 class="cbp-ig-title ng-binding">heroku</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-html5-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">html5</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-ie10-original"></i>
+                <h3 class="cbp-ig-title ng-binding">ie10</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-illustrator-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">illustrator</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-inkscape-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">inkscape</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-intellij-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">intellij</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-ionic-original"></i>
+                <h3 class="cbp-ig-title ng-binding">ionic</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-jasmine-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">jasmine</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-java-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">java</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-javascript-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">javascript</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-jeet-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">jeet</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-jetbrains-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">jetbrains</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-jquery-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">jquery</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-krakenjs-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">krakenjs</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-laravel-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">laravel</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-less-plain-wordmark"></i>
+                <h3 class="cbp-ig-title ng-binding">less</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-linkedin-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">linkedin</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-linux-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">linux</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-meteor-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">meteor</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-mocha-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">mocha</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-mongodb-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">mongodb</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-moodle-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">moodle</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-mysql-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">mysql</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-nginx-original"></i>
+                <h3 class="cbp-ig-title ng-binding">nginx</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-nodejs-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">nodejs</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-nodewebkit-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">nodewebkit</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-"></i>
+                <h3 class="cbp-ig-title ng-binding">npm</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-oracle-original"></i>
+                <h3 class="cbp-ig-title ng-binding">oracle</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-photoshop-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">photoshop</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-php-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">php</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-phpstorm-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">phpstorm</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-postgresql-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">postgresql</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-protractor-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">protractor</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-pycharm-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">pycharm</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-python-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">python</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-rails-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">rails</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-react-original"></i>
+                <h3 class="cbp-ig-title ng-binding">react</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-redhat-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">redhat</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-redis-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">redis</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-"></i>
+                <h3 class="cbp-ig-title ng-binding">redux</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-ruby-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">ruby</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-rubymine-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">rubymine</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-rust-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">rust</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-safari-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">safari</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-sass-original"></i>
+                <h3 class="cbp-ig-title ng-binding">sass</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-scala-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">scala</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-sequelize-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">sequelize</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-sketch-line"></i>
+                <h3 class="cbp-ig-title ng-binding">sketch</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-slack-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">slack</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-sourcetree-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">sourcetree</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-ssh-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">ssh</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-stylus-original"></i>
+                <h3 class="cbp-ig-title ng-binding">stylus</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-swift-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">swift</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-symfony-original"></i>
+                <h3 class="cbp-ig-title ng-binding">symfony</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-tomcat-line"></i>
+                <h3 class="cbp-ig-title ng-binding">tomcat</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-travis-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">travis</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-trello-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">trello</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-twitter-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">twitter</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-typescript-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">typescript</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-ubuntu-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">ubuntu</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-vagrant-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">vagrant</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-vim-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">vim</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-visualstudio-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">visualstudio</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-vuejs-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">vuejs</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-webpack-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">webpack</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-webstorm-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">webstorm</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-windows8-original"></i>
+                <h3 class="cbp-ig-title ng-binding">windows8</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-wordpress-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">wordpress</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-yarn-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">yarn</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-yii-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">yii</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-"></i>
+                <h3 class="cbp-ig-title ng-binding">yunohost</h3>
+            </span>
+        </li>
+        <li ng-repeat="icon in icons | filter:search" class="ng-scope">
+            <span ng-class="{'selected': icon.selected}" ng-click="selectIcon(icon)">
+                <i class="cbp-ig-icon devicon-zend-plain"></i>
+                <h3 class="cbp-ig-title ng-binding">zend</h3>
+            </span>
+        </li> 
+    </ul>-->
 </section>

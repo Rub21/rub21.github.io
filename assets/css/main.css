@@ -1252,6 +1252,69 @@ a.newer-posts:hover {
   opacity: 0.8;
 }
 
+/* - - - - - - - - - - skills Styles - - - - - - - - - - */
+.skill_box {
+  display: grid;
+  gap: 4px;
+  grid-auto-flow: row;
+  width: 100%;
+}
+
+.skill_header {
+  width: 100%;
+  border-bottom: 2px solid #ecf0f1;
+  background-color: #fafafa;
+}
+
+.cbp-ig-grid {
+  list-style-image: initial;
+}
+
+.cbp-ig-grid {
+  list-style: none;
+  padding: 0 0 50px;
+  margin: 0;
+}
+
+.cbp-ig-grid li {
+  width: 25%;
+  float: left;
+  height: 200px;
+  text-align: center;
+}
+
+.cbp-ig-icon {
+  display: block;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -moz-transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.cbp-ig-grid .cbp-ig-title {
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.2s;
+  -moz-transition: -moz-transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.skills .icon-text {
+  font-size: 1.2rem;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  background-color: #515151;
+  line-height: 80px;
+  color: #FBFBFB;
+  border-radius: 20%;
+  -moz-border-radius: 20%;
+  -webkit-border-radius: 20%;
+}
+
+.skills i {
+  font-size: 5rem;
+}
+
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
