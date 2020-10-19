@@ -14,3 +14,6 @@ images: [
 sponsor: "By [Rub21](https://www.rub21.com)"
 ---
 CLI tool to split 100 thousand points into blocks according to the school density. The data come from [SIGMED](http://sigmed.minedu.gob.pe/mapaeducativo)
+
+![](/assets/images/project_images/school-import/data-page.png)
+![](/assets/images/project_images/school-import/split-blocks.png)
