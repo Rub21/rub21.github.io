@@ -3,13 +3,6 @@
 ### Development
 
 ```
-yarn start
-```
-
-### Deploy
-
-```
-yarn build
-cp CNAME build/
-gh-pages --branch master -d build
+mpn install
+bundle exec jekyll serve --livereload
 ```
