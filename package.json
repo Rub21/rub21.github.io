@@ -13,7 +13,8 @@
   "homepage": "http://rub21.com",
   "license": "MIT",
   "scripts": {
-    "build": "sass assets/css/scss/main.scss assets/css/main.css"
+    "build": "sass assets/css/scss/main.scss assets/css/main.css",
+    "serve": "bundle exec jekyll serve --livereload"
   },
   "dependencies": {
     "browser-sync": "^2.18.13",

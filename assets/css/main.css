@@ -1336,6 +1336,11 @@ a.newer-posts:hover {
   .post .post-content .post-title a {
     font-size: 21px;
   }
+
+  .post-full {
+    width: 100%;
+    height: 700px;
+  }
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -1376,6 +1381,11 @@ a.newer-posts:hover {
   .contact-title, .copyright {
     display: none;
   }
+
+  .post-full {
+    width: 100%;
+    height: 400px;
+  }
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
@@ -1400,6 +1410,11 @@ a.newer-posts:hover {
   }
   .post .post-content .post-title a {
     font-size: 21px;
+  }
+
+  .post-full {
+    width: 100%;
+    height: 200px;
   }
 }
 

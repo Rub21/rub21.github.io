@@ -11,8 +11,12 @@ layout: main
         <figcaption>{{page.fig-caption}}</figcaption>
         {% endif %}
       </figure>
-    </div> <!-- End Page Cover Image -->
-    {% else %}
+    </div>
+    {% endif %}
+    {% if page.vid %}
+      <iframe src="{{ page.vid }}" style="width: 100%; min-height: 20%; height: 400px;" webkitallowfullscreen mozallowfullscreen
+        allowfullscreen>
+      </iframe>
     {% endif %}
     <div class="wrap-content">
       <header class="header-page">

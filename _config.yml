@@ -15,7 +15,7 @@ social-linkedin: rub21
 social-email: ruben@developmentseed.org
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+discus-identifier: aws # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics
