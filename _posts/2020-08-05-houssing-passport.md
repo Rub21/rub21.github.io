@@ -40,6 +40,7 @@ At this stage we ran detection over hundred thousand of images.
 
 ![](/assets/images/project_images/hp/inference.jpg)
 
+- [https://github.com/developmentseed/chip-n-scale-queue-arranger](https://github.com/developmentseed/chip-n-scale-queue-arranger)
 ## Matching detection and building footprints
 
 ![](/assets/images/project_images/hp/image_matching.jpg)

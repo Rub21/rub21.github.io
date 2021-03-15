@@ -2,7 +2,7 @@
 layout: post
 title: 'Special Economic Zones Viewer'
 github_url: https://en.wikipedia.org/wiki/Special_economic_zone
-live_url: https://devseed.com/relabeler
+live_url: http://devseed.com/sez-viewer
 tags: [react, digitalglobe, mapbox, material-ui]
 technologies: React, DigitalGlobe, Mapbox, Material-ui
 vid: https://player.vimeo.com/video/389646763
