@@ -29,8 +29,7 @@ sponsor: 'By [DevSeed](http://devseed.com/)'
 
 I am one of the Infrastructure developers at this project, The projects is deployed Over AWS using Kubernetes for the Docker containers orchestration.all the code for the projects can be dounf at: [https://github.com/developmentseed/osm-seed](https://github.com/developmentseed/osm-seed), and [https://github.com/OpenHistoricalMap/ohm-deploy](https://github.com/OpenHistoricalMap/ohm-deploy)
 
-As Peruvians, my colleagues and I Added the Inca Empire map - Tahuantinsuyo and Inca roads in the platform.
-We used some images that we reproject using Python and use JOSM to add the the data, This data is is available for everyone.
+As Peruvians, my colleagues and I Added the Inca Empire map - Tahuantinsuyo and Inca roads in the platform. We used some images that we reproject using Python and use JOSM to add the the data, This data is is available for everyone.
 
 ## Mapping process of the Inca Empire map boundaries
 
@@ -42,4 +41,5 @@ We used some images that we reproject using Python and use JOSM to add the the d
 
 ## Results
 
+[https://openhistoricalmap.org/](https://openhistoricalmap.org/#map=5/-16.259/-70.273&layers=O&date=1522&daterange=1400,1543)
 ![](https://media-exp3.licdn.com/dms/image/C4E22AQHFQKYyeSngCw/feedshare-shrink_1280/0/1623204356729?e=1629331200&v=beta&t=nOb5sHlnEUnflN6NHaXRnYw4wwEE6yTzK-_wS5nC6pA)
