@@ -19,7 +19,7 @@ tags:
     peru,
   ]
 technologies: phyhon,mapping,docker
-img: https://media-exp3.licdn.com/dms/image/C4E22AQHFQKYyeSngCw/feedshare-shrink_1280/0/1623204356729?e=1629331200&v=beta&t=nOb5sHlnEUnflN6NHaXRnYw4wwEE6yTzK-_wS5nC6pA
+img: /assets/images/project_images/openhistoricalmap/ohm.gif
 images:
   [
     '/assets/images/project_images/openhistoricalmap/ohm.jpg',
