@@ -2,29 +2,28 @@
   "name": "rub21.github.io",
   "version": "0.1.0",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ru21/rub21.github.io.git"
-  },
-  "author": "Rub21",
-  "bugs": {
-    "url": "https://github.com/Ru21/rub21.github.io/issues"
-  },
-  "homepage": "http://rub21.com",
-  "license": "MIT",
   "scripts": {
-    "build": "sass assets/css/scss/main.scss assets/css/main.css",
-    "serve": "bundle exec jekyll serve --livereload"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "browser-sync": "^2.18.13",
-    "child_process": "^1.0.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-cache": "^0.4.6",
-    "gulp-imagemin": "^3.2.0",
-    "gulp-sass": "^3.1.0",
-    "imagemin-pngquant": "^5.0.0",
-    "sass": "^1.27.0"
+    "@types/node": "20.5.3",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.15",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.19",
+    "framer-motion": "^10.16.1",
+    "next": "13.4.19",
+    "postcss": "8.4.28",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6",
+    "typewriter-effect": "^2.20.1"
+    
   }
 }
