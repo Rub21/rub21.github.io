@@ -6,7 +6,6 @@
 // import { ImageProps } from 'next/image';
 // import Image from "next/image";
 
-
 // type Props = {
 //   image: ImageProps;
 //   title:string;
@@ -30,39 +29,34 @@
 // //   },
 // // };
 
-// const ProjectCard: React.FC<Props> = ({ 
-//   image, 
-//   title, 
-//   description, 
-//   gitLink, 
-//   youtubeLink, 
-//   liveLink, 
+// const ProjectCard: React.FC<Props> = ({
+//   image,
+//   title,
+//   description,
+//   gitLink,
+//   youtubeLink,
+//   liveLink,
 //   techStackList,
-//   imageUrl, 
+//   imageUrl,
 // }) => {
 
 //   const divStyle = {
 //     backgroundImage: `url(${imageUrl})`,
 //   };
 
-
-
-
-
-
 //   return (
 //     <div>
-      
+
 //       {/* PROJECT Container.... */}
-//       <div 
+//       <div
 //         className='max-w-containerSmall mx-auto flex flex-col items-center justify-between gap-28 mt-10'>
-        
+
 //         {/* MEDIA QUEREY: LARGE SCREENS */}
 //         <div className='hidden flex-col mdl:flex sml:flex-row gap-6'>
 //           {/* Image-div*/}
 //           <a
-//             className='w-full h-full justify-center align-middle relative group sml:w-1/2' 
-//             href={liveLink} 
+//             className='w-full h-full justify-center align-middle relative group sml:w-1/2'
+//             href={liveLink}
 //             target='_blank'
 //           >
 //             <div>
@@ -75,7 +69,7 @@
 //             </div>
 //           </a>
 //           {/* Text-div */}
-//           <div 
+//           <div
 //           className='w-full z-10 sml:w-1/2 flex flex-col gap-6 sml:justify-between items-end text-right md:-ml-16 '>
 //             <p className='font-titleFont text-textGreen text-sm tracking-wide'>Featured Project</p>
 //             <h3 className='text-2xl font-bold hover:text-textGreen'> {title} </h3>
@@ -92,22 +86,22 @@
 //             {/* Links to showcase project  🎯TO-DO */}
 //             <div className='text-2xl flex gap-4'>
 //                 {/* GitHub */}
-//                 <a 
-//                   className='hover:text-textGreen duration-300' 
-//                   href={gitLink} 
+//                 <a
+//                   className='hover:text-textGreen duration-300'
+//                   href={gitLink}
 //                   target='_blank'>
 //                     <RiGithubLine />
 //                 </a>
 //                 {/* YouTube */}
-//                 <a 
-//                   className='hover:text-textGreen duration-300' 
-//                   href={youtubeLink} 
+//                 <a
+//                   className='hover:text-textGreen duration-300'
+//                   href={youtubeLink}
 //                   target='_blank'>
 //                     <SlSocialYoutube />
 //                 </a>
 //                 {/* LiveDemo */}
-//                 <a 
-//                   className='hover:text-textGreen duration-300' 
+//                 <a
+//                   className='hover:text-textGreen duration-300'
 //                   href={liveLink}
 //                   target='_blank'>
 //                     <FiExternalLink />
@@ -128,9 +122,8 @@
 //             </div>
 //           </div>
 //         </div>
-          
-          
-//           <div 
+
+//           <div
 //           className='w-fit px-5 z-10 flex flex-col gap-6 mx-3'>
 //             <p className='font-titleFont text-textGreen text-sm tracking-wide pt-5'>Featured Project</p>
 //             <h3 className='font-titleFont text-2xl font-bold hover:text-textGreen'> {title} </h3>
@@ -147,22 +140,22 @@
 //             {/* Links to showcase project  🎯TO-DO */}
 //             <div className='text-2xl flex gap-4 pb-10 items-end text-right'>
 //                 {/* GitHub */}
-//                 <a 
-//                   className='hover:text-textGreen duration-300' 
+//                 <a
+//                   className='hover:text-textGreen duration-300'
 //                   href={gitLink}
 //                   target='_blank'>
 //                     <RiGithubLine />
 //                 </a>
 //                 {/* YouTube */}
-//                 <a 
-//                   className='hover:text-textGreen duration-300' 
+//                 <a
+//                   className='hover:text-textGreen duration-300'
 //                   href={youtubeLink}
 //                   target='_blank'>
 //                     <SlSocialYoutube />
 //                 </a>
 //                 {/* LiveDemo */}
-//                 <a 
-//                   className='hover:text-textGreen duration-300' 
+//                 <a
+//                   className='hover:text-textGreen duration-300'
 //                   href={youtubeLink}
 //                   target='_blank'>
 //                     <FiExternalLink />
@@ -173,12 +166,11 @@
 //         </div>
 
 //       </div>
-      
+
 //     </div>
 //   )
 // }
 
 // export default ProjectCard;
-
 
 // //NEED TO FIX THE LINK FOR GITHUB ON THE SMALL PROJECTS - EVERYTHING GOES TO LIVE DEMO
