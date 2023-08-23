@@ -1,6 +1,6 @@
 import logo from "./images/LogoBig.png";
 import profileImg from "./images/Devon.jpg";
-import profileImgCircle from "./images/Devon_circle.png";
+import profileImgCircle from "./images/me.jpg";
 
 import FaceDetection from "./images/ProjectPictures/FaceDetection.png";
 import Ecommerce from "./images/ProjectPictures/Ecommerce.webp";
@@ -21,4 +21,56 @@ import PostgreSQL from "./images/Skills/PostgreSQL.png";
 import MongoDB from "./images/Skills/MongoDB.png";
 import GraphQL from "./images/Skills/GraphQL.png";
 
-export { CSS, HTML, ReactL, Next, Redux, NodeJS, Express, PostgreSQL, MongoDB, GraphQL, JavaScriptL, TypeScript, Python, logo, profileImg, profileImgCircle, FaceDetection, Ecommerce, MissionControl, SpotifyClone };
+import Mapbox from "./images/Skills/mapbox.png";
+import Openlayer from "./images/Skills/openlayer.png";
+import Leafleat from "./images/Skills/leafleat.png";
+import Java from "./images/Skills/Java.png";
+import Hapi from "./images/Skills/hapi.svg";
+
+import Github from "./images/Skills/Github.webp";
+import Docker from "./images/Skills/Docker.png";
+import Kubernetes from "./images/Skills/Kubernetes.png";
+
+import AWS from "./images/Skills/AWS.png";
+import GCP from "./images/Skills/GCP.png";
+
+
+import QGis from "./images/Skills/QGis.png";
+import ArcGIS from "./images/Skills/ArcGIS.png";
+import OSM from "./images/Skills/OSM.png";
+
+
+export {
+    OSM,
+    QGis,
+    ArcGIS,
+    AWS,
+    GCP,
+    Github,
+    Docker,
+    Kubernetes,
+     CSS,
+     HTML,
+     ReactL,
+     Mapbox,
+     Next,
+     Leafleat,
+     Openlayer,
+     Redux,
+     NodeJS,
+     Express,
+     PostgreSQL,
+     MongoDB,
+     GraphQL,
+     JavaScriptL,
+     TypeScript,
+     Python,
+     logo,
+     profileImg,
+     profileImgCircle,
+     FaceDetection,
+     Ecommerce,
+     MissionControl,
+     SpotifyClone,
+     Java,
+     Hapi };

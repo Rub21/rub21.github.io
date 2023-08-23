@@ -19,7 +19,7 @@ const computedFields = {
 
 export const Project = defineDocumentType(() => ({
     name: 'Project',
-    filePathPattern: `projects/*.mdx`,
+    filePathPattern: `projects/*.md`,
     contentType: 'mdx',
     fields: {
         layout: {
@@ -30,27 +30,37 @@ export const Project = defineDocumentType(() => ({
             type: 'string',
             required: true,
         },
-        // github_url: {
-        //     type: 'string',
-        // },
-        // tags: {
-        //     type: 'string',
-        //     required: true,
-        // },
-        // technologies: {
-        //     type: 'string',
-        // },
-        // img: {
-        //     type: 'string',
-        // },
-        // sponsor: {
-        //     type: 'string',
-        // },
+        live_url: {
+            type: 'string',
+
+        },
+        github_url: {
+            type: 'string',
+        },
+        tags: {
+            type: 'list',
+            of: {
+                type: 'string',
+            },
+        },
+        technologies: {
+            type: 'string',
+        },
+        img: {
+            type: 'string',
+        },
+        images: {
+            type: 'list',
+            of: {
+                type: 'string',
+            },
+        },
+        sponsor: {
+            type: 'string',
+        },
     },
     computedFields,
 }));
-
-
 
 export default makeSource({
     contentDirPath: 'src/content',

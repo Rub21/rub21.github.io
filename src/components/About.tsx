@@ -20,7 +20,10 @@ import {
   Python,
 } from "../../public/assets";
 
+import Skills from "./static/skills";
+
 const About = () => {
+  console.log("%cAbout.tsx line:28 Skills", "color: #007acc;", Skills);
   return (
     <section
       id="about"
@@ -45,7 +48,7 @@ const About = () => {
                 />
 
                 {/* background-blur-effect */}
-                <div className=" mdl:hidden absolute top-0 left-0 w-24 h-24 sm:w-32 sm:h-32 sml:w-40 sml:h-40 md:w-48 md:h-48 bg-textGreen/20 rounded-full hover:bg-transparent duration-300 "></div>
+                {/* <div className=" mdl:hidden absolute top-0 left-0 w-24 h-24 sm:w-32 sm:h-32 sml:w-40 sml:h-40 md:w-48 md:h-48 bg-textGreen/20 rounded-full hover:bg-transparent duration-300 "></div> */}
               </div>
             </div>
 
@@ -59,29 +62,7 @@ const About = () => {
               technologies and open data, which are my go-to resources for
               application development.
               <br /> <br />I am an active member of the OpenStreetMap community,
-              known there as Rub21. Hello! I&apos;m Devon Gifford, a{" "}
-              <span className="text-textGreen">full stack developer</span>{" "}
-              driven by a passion for continuous learning and problem-solving.
-              With a solid background in front-end and back-end development, I
-              specialize in crafting user-friendly and responsive web
-              applications using <span className="text-textGreen">React</span>{" "}
-              and its ecosystem. My journey into web development began during my
-              time as a freelancer, creating websites for marketing clients in
-              South Africa. Since then, I&apos;ve had the opportunity to work in
-              QA for a major <span className="text-textGreen">FAANG</span>{" "}
-              company in Europe, where I discovered my true passion for
-              problem-solving.
-              <br />
-              <br />
-              Combining my technical skills, creativity, and a keen eye for
-              detail, I strive to deliver{" "}
-              <span className="text-textGreen">innovative solutions</span> that
-              meet client needs and exceed expectations. I am excited to
-              contribute my expertise to collaborative projects and continue
-              expanding my knowledge in this{" "}
-              <span className="text-textGreen">ever-evolving</span> field.
-              <br />
-              Let&apos;s create something amazing together!
+              known there as Rub21. Hello!
             </p>
           </div>
         </div>
@@ -98,142 +79,38 @@ const About = () => {
             />
 
             {/* background-blur-effect */}
-            <div className="z-30 hidden mdl:inline-block absolute w-52 h-52 lgl:w-80 lgl:h-80 bg-textGreen/20 rounded-full top-0 left-0 group-hover:bg-transparent duration-300 "></div>
+            {/* <div className="z-30 hidden mdl:inline-block absolute w-52 h-52 lgl:w-80 lgl:h-80 bg-textGreen/20 rounded-full top-0 left-0 group-hover:bg-transparent duration-300 "></div> */}
 
             {/* Animated Circle */}
-            <div className="z-10 left-6 top-6 hidden absolute mdl:inline-block w-52 h-52 lgl:w-80 lgl:h-80 border-2 border-textGreen rounded-full group-hover:-translate-x-6 group-hover:-translate-y-6 transition-transform duration-100"></div>
+            {/* <div className="z-10 left-6 top-6 hidden absolute mdl:inline-block w-52 h-52 lgl:w-80 lgl:h-80 border-2 border-textGreen rounded-full group-hover:-translate-x-6 group-hover:-translate-y-6 transition-transform duration-100"></div> */}
           </div>
         </div>
 
         {/* Skill Logo's */}
-        <div className="row-start-3 col-span-full pt-5">
-          <p className="pb-5 font-codeFont text-textDark font-bold text-center text-sm lg:text-base">
-            The Technologies I am most profficient & passionate about:
+        <div className="row-start-3 col-span-full pt-5 ">
+          <p className="pb-5 font-codeFont text-textDark font-bold text-left text-sm lg:text-base ">
+            The Technologies skills:
           </p>
 
-          <ul className="flex flex-row flex-wrap gap-4 ml-3 mt-1 justify-center">
-            {/* JavaScriptLogo */}
-            <li className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300">
-              <Image
-                className="rounded-full w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
-                src={JavaScriptL}
-                alt="JavaScript"
-                title="JavaScript"
-              />
-            </li>
-            {/* TypeScript Logo */}
-            <li className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300">
-              <Image
-                className="rounded-full w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
-                src={TypeScript}
-                alt="TypeScript"
-                title="TypeScript"
-              />
-            </li>
-            {/* Python Logo */}
-            <li className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300">
-              <Image
-                className="rounded-full w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
-                src={Python}
-                alt="Python"
-                title="Python"
-              />
-            </li>
-            {/* HTML Logo */}
-            <li className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300">
-              <Image
-                className="rounded-full w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
-                src={HTML}
-                alt="HTML5"
-                title="HTML5"
-              />
-            </li>
-            {/* CSS */}
-            <li className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300">
-              <Image
-                className="rounded-full w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
-                src={CSS}
-                alt="CSS3"
-                title="CSS3"
-              />
-            </li>
-          </ul>
-          <ul className="flex flex-row flex-wrap gap-4 ml-3 mt-5 justify-center">
-            {/* React Logo */}
-            <li className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300">
-              <Image
-                className="rounded-full w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
-                src={ReactL}
-                alt="React"
-                title="React"
-              />
-            </li>
-            {/* Next */}
-            <li className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300">
-              <Image
-                className="rounded-full w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
-                src={Next}
-                alt="NextJS"
-                title="NextJS"
-              />
-            </li>
-            {/* Redux */}
-            <li className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300">
-              <Image
-                className="w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
-                src={Redux}
-                alt="Redux"
-                title="Redux"
-              />
-            </li>
-            {/* NodeJS */}
-            <li className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300">
-              <Image
-                className="w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
-                src={NodeJS}
-                alt="NodeJS"
-                title="NodeJS"
-              />
-            </li>
-            {/* Express */}
-            <li className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300">
-              <Image
-                className="rounded-full w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
-                src={Express}
-                alt="ExpressJS"
-                title="ExpressJS"
-              />
-            </li>
-          </ul>
-          <ul className="flex flex-row flex-wrap gap-4 ml-3 mt-5 justify-center">
-            {/* PostgreSQL */}
-            <li className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300">
-              <Image
-                className="w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
-                src={PostgreSQL}
-                alt="PostgreSQL"
-                title="PostgreSQL"
-              />
-            </li>
-            {/* MongoDB */}
-            <li className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300">
-              <Image
-                className="rounded-full w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
-                src={MongoDB}
-                alt="MongoDB"
-                title="MongoDB"
-              />
-            </li>
-            {/* GraphQL */}
-            <li className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300">
-              <Image
-                className=" w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
-                src={GraphQL}
-                alt="GraphQL"
-                title="GraphQL"
-              />
-            </li>
-          </ul>
+          {Skills.map((field) => (
+            <div className="flex flex-row items-center m-4">
+              <p className="pb-5 font-codeFont w-20 text-textDark font-bold text-left text-sm lg:text-base ml-3 mt-1">
+                {field.name}
+              </p>
+              <ul className="flex flex-row flex-wrap gap-4 ml-5 -mt-5 justify-center">
+                {field.types.map((t) => (
+                  <li className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300">
+                    <Image
+                      className="rounded-full w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
+                      src={t.src}
+                      alt={t.skill_name}
+                      title={t.skill_name}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -241,5 +118,3 @@ const About = () => {
 };
 
 export default About;
-
-//I need to do something about the photo being warped in mobile view

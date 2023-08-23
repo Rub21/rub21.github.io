@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "content": "yarn contentlayer build --verbose",
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "yarn content && next build",
+    "start": "yarn content && next start",
     "clean": "rimraf build/",
     "lint": "next lint",
-    "deploy": "yarn clean && PUBLIC_URL=/ds-annotate REACT_APP_ENV=production yarn build && gh-pages -d build",
-    "prettier": "yarn clean && prettier --write 'src/**/*.tsx'"
+    "deploy": "yarn content && yarn clean && PUBLIC_URL=/ds-annotate REACT_APP_ENV=production yarn build && gh-pages -d build",
+    "prettier": "yarn content && yarn clean && prettier --write 'src/**/*.tsx'"
   },
   "dependencies": {
     "@types/node": "20.5.3",
