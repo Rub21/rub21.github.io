@@ -8,60 +8,60 @@ technologies: [Python,Postgres,Docker]
 img: https://miro.medium.com/max/1400/0*EWaOMw5CJGOHmInR
 images: ['https://miro.medium.com/max/1400/0*EWaOMw5CJGOHmInR']
 sponsor: 'By [DevSeed](http://devseed.com/)'
-description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam sequi voluptatum excepturi amet harum beatae cum quibusdam laudantium, labore nemo, minima quisquam tempora veritatis aliquam reiciendis atque iste at aut? "
+description: "As part of a World Bank initiative, Development Seed—the company I am affiliated with—is working on identifying potentially hazardous construction features using geotagged street view imagery. This project aims to assess the safety of buildings in the context of natural disasters like earthquakes, high winds, and floods."
 ---
 
-The Housing Passports is a [World Bank project](http://documents1.worldbank.org/curated/en/605571574937088827/pdf/Synthesis-Report.pdf) with collaboration of [Development Seed](http://devseed.com/), the company that I work.
+# Housing Passports: Enhancing Construction Safety Through Machine Learning
 
-The World Bank is working on detection of specific construction features, within geotagged street view imagery. The goal is to find building features that are potentially dangerous during earthquakes, high winds, floods, etc.
+As part of a [World Bank initiative](http://documents1.worldbank.org/curated/en/605571574937088827/pdf/Synthesis-Report.pdf), [Development Seed](http://devseed.com/)—the company I am affiliated with—is working on identifying potentially hazardous construction features using geotagged street view imagery. This project aims to assess the safety of buildings in the context of natural disasters like earthquakes, high winds, and floods.
 
-# Machine Learning process for Housing Passports
+## The Machine Learning Workflow for Housing Passports
 
-Development Seed was in charge of running the part of training a Machine Learning Module and run the inferences over millions of street view images. The process of training a ML module takes many steps, that i aging to mention below 👇
+Development Seed spearheaded the machine learning aspect of this project, focusing on training models and running inferences on millions of street view images. Here's an overview of the key steps involved:
 
-## Image labeling and TFRecords creation
+### 1. Image Labeling and TFRecords Creation
 
-In this process, we generated training data, and then the creation of TFRecords for the inputs for module training:
+In this phase, we generated labeled training data and then created TFRecords as inputs for the machine learning model.
 
-![](/assets/images/project_images/hp/data-trainning.jpg)
+![Data Training](/assets/images/project_images/hp/data-trainning.jpg)
 
-Guide for correct labeling: [http://devseed.com/housing-passports-labeling/](http://devseed.com/housing-passports-labeling/)
+- **Labeling Guide**: [Housing Passports Labeling Guidelines](http://devseed.com/housing-passports-labeling/)
 
-## Module training
+### 2. Module Training
 
-In step, we used Kubeflow and kubernetes and eventually we containerized the module in docker container
+Here we utilized Kubeflow and Kubernetes for the training process, eventually containerizing the model in a Docker container.
 
-![](/assets/images/project_images/hp/module_trainning.jpg)
+![Module Training](/assets/images/project_images/hp/module_trainning.jpg)
 
-- Building parts image: https://hub.docker.com/r/developmentseed/building_parts
-- Building properties image: https://hub.docker.com/r/developmentseed/building_properties
+- **Docker Images**:
+  - [Building Parts](https://hub.docker.com/r/developmentseed/building_parts)
+  - [Building Properties](https://hub.docker.com/r/developmentseed/building_properties)
 
-## Running Inference
+### 3. Running Inference
 
-At this stage we ran detection over hundred thousand of images.
+In this stage, detection was carried out on hundreds of thousands of images.
 
-![](/assets/images/project_images/hp/inference.jpg)
+![Inference](/assets/images/project_images/hp/inference.jpg)
 
-- [https://github.com/developmentseed/chip-n-scale-queue-arranger](https://github.com/developmentseed/chip-n-scale-queue-arranger)
-## Matching detection and building footprints
+- **Codebase**: [Chip-n-Scale Queue Arranger on GitHub](https://github.com/developmentseed/chip-n-scale-queue-arranger)
 
-![](/assets/images/project_images/hp/image_matching.jpg)
+### 4. Matching Detection with Building Footprints
 
-![](/assets/images/project_images/hp/image_matching2.jpg)
+We cross-referenced the detected features with existing building footprints and stored this data in a georeferenced PostgreSQL database.
 
-We got a postgres database with georeferenced detections.
+![Image Matching](/assets/images/project_images/hp/image_matching.jpg)
 
-## Visualizing predictions
+### 5. Visualizing Predictions
 
-We built a dashboard for prediction visualization
+Finally, we developed a dashboard to visualize the predictions.
 
-![](/assets/images/project_images/hp/viz.jpg)
+![Dashboard](/assets/images/project_images/hp/viz.jpg)
 
-[https://housing-passports.surge.sh](https://housing-passports.surge.sh)
+- **Dashboard**: [Housing Passports Visualization](https://housing-passports.surge.sh)
 
-### Public repositories and resources
+## Additional Resources
 
-- [https://github.com/developmentseed/housing-passports-frontend](https://github.com/developmentseed/housing-passports-frontend)
-- [https://github.com/developmentseed/housing-passports-labeling](https://github.com/developmentseed/housing-passports-labeling)
-- [https://medium.com/devseed/finding-vulnerable-housing-in-street-view-images-using](https://medium.com/devseed/finding-vulnerable-housing-in-street-view-images-using-ai-to-create-safer-cities-2b58b4e3b991)
-- [https://understandrisk.org/wp-content/uploads/4_DevSeed_UR-2019-urban-change-public.pdf](https://understandrisk.org/wp-content/uploads/4_DevSeed_UR-2019-urban-change-public.pdf)
+- **Frontend Repository**: [Housing Passports Frontend on GitHub](https://github.com/developmentseed/housing-passports-frontend)
+- **Labeling Repository**: [Housing Passports Labeling on GitHub](https://github.com/developmentseed/housing-passports-labeling)
+- **Blog Post**: [Finding Vulnerable Housing Using AI](https://medium.com/devseed/finding-vulnerable-housing-in-street-view-images-using-ai-to-create-safer-cities-2b58b4e3b991)
+- **Technical Report**: [Urban Change Public Report](https://understandrisk.org/wp-content/uploads/4_DevSeed_UR-2019-urban-change-public.pdf)

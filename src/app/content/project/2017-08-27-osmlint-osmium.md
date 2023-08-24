@@ -10,6 +10,21 @@ images: [
                 '/assets/images/project_images/osmlint/osmlint-osmium.png'
           ]
 sponsor: "By [Mapbox](https://www.mapbox.com)"
-description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam sequi voluptatum excepturi amet harum beatae cum quibusdam laudantium, labore nemo, minima quisquam tempora veritatis aliquam reiciendis atque iste at aut? "
+description: "Welcome to Osmlint-osmium, a comprehensive suite of scripts designed to validate OpenStreetMap data using PBF files. Built atop node-osmium, this tool offers high-performance data reading capabilities. "
 ---
-Osmlint-osmium is a set scrpits to Validate OpenStreetMap data with PBF files. osmlint-osmium is using node-osmium to read the OSM data, dont forget install the dependencies.
+
+# Osmlint-osmium: OpenStreetMap Data Validator
+
+Welcome to **Osmlint-osmium**, a comprehensive suite of scripts designed to validate OpenStreetMap data using PBF files. Built atop node-osmium, this tool offers high-performance data reading capabilities.
+
+## 🛠️ Key Features:
+
+### 🌐 OSM Data Validation
+Efficiently validate large sets of OpenStreetMap data to ensure its accuracy and integrity.
+
+### 🚀 Powered by Node-Osmium
+Leverages the capabilities of node-osmium for fast and reliable OSM data reading.
+
+### 💡 Easy to Integrate
+Designed as a set of scripts, Osmlint-osmium can be easily incorporated into your existing data processing pipelines.
+

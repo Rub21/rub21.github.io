@@ -12,9 +12,32 @@ images: [
                 '/assets/images/project_images/school-import/split-blocks.png'
       ]
 sponsor: "By [Rub21](https://www.rub21.com)"
-description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam sequi voluptatum excepturi amet harum beatae cum quibusdam laudantium, labore nemo, minima quisquam tempora veritatis aliquam reiciendis atque iste at aut? "
+description: "Introducing our Command-Line Interface (CLI) tool designed to partition 100,000 points into density-based blocks. This tool is particularly useful for handling large datasets related to school locations."
 ---
-CLI tool to split 100 thousand points into blocks according to the school density. The data come from [SIGMED](http://sigmed.minedu.gob.pe/mapaeducativo)
+# School Density CLI Tool
+
+Introducing our Command-Line Interface (CLI) tool designed to partition 100,000 points into density-based blocks. This tool is particularly useful for handling large datasets related to school locations. The data is sourced from [SIGMED](http://sigmed.minedu.gob.pe/mapaeducativo), Peru's educational map database.
+
+## 🌟 Key Features:
+
+### 🗺️ Density-Based Partitioning
+The tool employs advanced algorithms to divide points based on school density, making it easier to manage and analyze the data.
+
+### ⚙️ CLI-First Design
+The tool is built with a command-line interface, ensuring that it integrates seamlessly into your data processing pipeline.
+
+### 📊 Visual Output
+In addition to data splitting, the tool provides visual cues for better understanding of the density-based blocks.
+
+## 📸 Screenshots:
+
+### Data Page
+View your data in a comprehensive layout.
 
 ![](/assets/images/project_images/school-import/data-page.png)
+
+### Split Blocks
+See how your data is split into density-based blocks.
+
 ![](/assets/images/project_images/school-import/split-blocks.png)
+

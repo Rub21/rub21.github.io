@@ -10,7 +10,9 @@ videos:
         - https://vimeo.com/389650411
 
 sponsor: "By [DevSeed](http://devseed.com/)"
-description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam sequi voluptatum excepturi amet harum beatae cum quibusdam laudantium, labore nemo, minima quisquam tempora veritatis aliquam reiciendis atque iste at aut? "
+description: "CVAT-Image-Validator is a specialized tool designed to review and validate annotations made in CVAT (Computer Vision Annotation Tool). The goal is to ensure that the annotated data meets high-quality standards for training robust Machine Learning models."
 ---
 
-CVAT-image-validator is a tool that helps to check all the editions made in [CVAT](https://github.com/opencv/cvat) and makes easy to validate in order to pass a good quality of data for Machine Learning model training.
+# CVAT-Image-Validator: Ensuring High-Quality Annotations for Machine Learning 
+
+**CVAT-Image-Validator** is a specialized tool designed to review and validate annotations made in [CVAT (Computer Vision Annotation Tool)](https://github.com/opencv/cvat). The goal is to ensure that the annotated data meets high-quality standards for training robust Machine Learning models.

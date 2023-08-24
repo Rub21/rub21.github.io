@@ -12,9 +12,28 @@ images: [
                 'https://wiki.openstreetmap.org/w/images/b/b0/5dsvdssdf.gif'
         ]
 sponsor: "By [Rub21](https://www.rub21.com)"
-description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam sequi voluptatum excepturi amet harum beatae cum quibusdam laudantium, labore nemo, minima quisquam tempora veritatis aliquam reiciendis atque iste at aut? "
+description: "Welcome to the dedicated platform developed by the Peru-OSM community to streamline the school import process into OpenStreetMap. This website serves as an essential tool for adding valuable educational facility data to the OSM database"
 ---
-Website to handle the school import process by the Peru-osm community.
+
+# Peru-OSM School Import Platform
+
+Welcome to the dedicated platform developed by the Peru-OSM community to streamline the school import process into OpenStreetMap. This website serves as an essential tool for adding valuable educational facility data to the OSM database.
+
+## Key Features:
+
+### Bulk Import Capabilities
+Efficiently upload data for multiple schools in one go, saving time and effort.
+
+### Data Validation
+In-built checks and verification processes ensure that only accurate and consistent data gets uploaded.
+
+### User-Friendly Interface
+The platform features an intuitive UI, making it simple for community members to contribute.
+
+## Visual Demos:
+
+Here are some quick visual demos to show you how the platform works:
 
 ![](https://wiki.openstreetmap.org/w/images/c/cb/4vdsfds.gif)
 ![](https://wiki.openstreetmap.org/w/images/b/b0/5dsvdssdf.gif)
+

@@ -11,11 +11,50 @@ images: [
                 'https://cloud.githubusercontent.com/assets/1152236/16133863/aa636bfe-33df-11e6-9161-6ccd6b10559c.gif'
           ]
 sponsor: "By [Mapbox](https://www.mapbox.com)"
-description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam sequi voluptatum excepturi amet harum beatae cum quibusdam laudantium, labore nemo, minima quisquam tempora veritatis aliquam reiciendis atque iste at aut? "
+description: "The TurnLanes-Tagging Editor Plugin is a user-friendly tool designed to simplify the process of adding turn:lanes tags to highways in OpenStreetMap. It provides an intuitive interface and interactive visuals to make lane tagging a seamless experience for mappers."
 ---
-TurnLanes-tagging Editor plugin provides an alternative way to add [turn:lanes](https://wiki.openstreetmap.org/wiki/Key:turn) tags on highways in OpenStreetMap
+# TurnLanes-Tagging Editor Plugin for OpenStreetMap
 
-![](https://cloud.githubusercontent.com/assets/1152236/16133679/c56fe05e-33de-11e6-8f18-cb5efa721cde.gif)
+## Introduction
 
-![](https://cloud.githubusercontent.com/assets/1152236/16133863/aa636bfe-33df-11e6-9161-6ccd6b10559c.gif)
-              
+The TurnLanes-Tagging Editor Plugin is a user-friendly tool designed to simplify the process of adding [turn:lanes](https://wiki.openstreetmap.org/wiki/Key:turn) tags to highways in OpenStreetMap. It provides an intuitive interface and interactive visuals to make lane tagging a seamless experience for mappers.
+
+![TurnLanes-tagging Editor Demo](https://cloud.githubusercontent.com/assets/1152236/16133679/c56fe05e-33de-11e6-8f18-cb5efa721cde.gif)
+
+## Features
+
+- **Interactive Lane Selection**: Visualize lane configuration and easily select which lane should have what turning directions.
+  
+- **Automated Tagging**: Automatically generates the appropriate `turn:lanes` tags based on the selected options.
+  
+- **Intuitive UI**: The interface is straightforward and easy to navigate, even for users who are new to OpenStreetMap editing.
+
+![TurnLanes-tagging Editor Features](https://cloud.githubusercontent.com/assets/1152236/16133863/aa636bfe-33df-11e6-9161-6ccd6b10559c.gif)
+
+## Installation
+
+1. Open your preferred OpenStreetMap editor.
+2. Go to `Plugins` -> `Manage Plugins` and search for "TurnLanes-Tagging Editor."
+3. Install the plugin and restart the editor.
+
+## Usage
+
+1. Select the highway segment you wish to tag.
+2. Open the TurnLanes-Tagging Editor plugin from the toolbar or menu.
+3. Use the visual interface to select the turning directions for each lane.
+4. Click `Apply` to save the changes.
+
+## Compatibility
+
+The TurnLanes-Tagging Editor plugin is compatible with most versions of popular OpenStreetMap editors like JOSM, iD, and others.
+
+## Contributing
+
+We welcome contributions to improve the plugin. Feel free to open issues and submit pull requests.
+
+- [GitHub Repository](#)
+  
+## Acknowledgements
+
+Special thanks to the OpenStreetMap community for their input and support in making this plugin a reality.
+

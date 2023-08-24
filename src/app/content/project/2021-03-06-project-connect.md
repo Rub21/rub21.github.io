@@ -29,30 +29,38 @@ images:
     '/assets/images/project_images/project_connect/School_classifier_workflow.jpg',
   ]
 sponsor: 'By [DevSeed](http://devseed.com/)'
-description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam sequi voluptatum excepturi amet harum beatae cum quibusdam laudantium, labore nemo, minima quisquam tempora veritatis aliquam reiciendis atque iste at aut? "
+description: "We've partnered with UNICEF to locate unmapped schools across eight countries: Kenya, Rwanda, Sierra Leone, Niger, Honduras, Ghana, Kazakhstan, and Uzbekistan. Through our efforts, we've successfully identified 23,100 new unmapped schools."
 ---
 
-We use Artificial Intelligence - AI to help UNICEF identify unmapped schools in Kenya, Rwanda, Sierra Leone, Niger, Honduras, Ghana, Kazakhstan and Uzbekistan as part of UNICEF's Giga project. We identified 23,100 new unmapped schools.
+# Utilizing AI to Map Unidentified Schools for UNICEF's Giga Project
 
-During 7 months, We built an end-to-end scalable AI model pipeline:
+We've partnered with UNICEF to locate unmapped schools across eight countries: Kenya, Rwanda, Sierra Leone, Niger, Honduras, Ghana, Kazakhstan, and Uzbekistan. Through our efforts, we've successfully identified 23,100 new unmapped schools.
 
-## Generating training data using high-resolution images (super-tiles) from Maxar- Training dataset and sorting them in Google Cloud storage.
+Over the course of seven months, we've engineered an end-to-end, scalable AI model pipeline consisting of the following components:
 
-![](/assets/images/project_images/project_connect/Supertile.jpg)
+## 1. Data Generation: Utilizing High-Resolution Satellite Images
+We employ high-resolution super-tiles from Maxar to generate a comprehensive training dataset. These images are systematically sorted and stored in Google Cloud Storage.
 
-## Developing an efficient model training and experiments - GKE Cluster.
+![Super-tile Example](/assets/images/project_images/project_connect/Supertile.jpg)
 
-![](/assets/images/project_images/project_connect/School_classifier_workflow.jpg)
+## 2. Model Training: Efficient Experimentation Using GKE Cluster
+Our team focuses on creating an efficient training environment. We've set up a Google Kubernetes Engine (GKE) Cluster to run multiple experiments and optimize the model.
 
-## Running detections models in more than 70 million images(tiles)- ML Enabler.
+![School Classifier Workflow](/assets/images/project_images/project_connect/School_classifier_workflow.jpg)
 
-![](/assets/images/project_images/project_connect/ml-enabler.gif)
+## 3. Object Detection: Scanning Over 70 Million Tiles with ML Enabler
+Our models are deployed to scan more than 70 million tiles using ML Enabler, allowing us to identify potential school locations across various terrains and conditions.
 
-## Experts Human validations.
+![ML Enabler Workflow](/assets/images/project_images/project_connect/ml-enabler.gif)
 
-![](/assets/images/project_images/project_connect/pc3_ghana.gif)
-![](/assets/images/project_images/project_connect/pc3_niger.gif)
-![](/assets/images/project_images/project_connect/pc3_kenya.gif)
+## 4. Expert Human Validation: Ensuring Accuracy 
+After automated identification, human experts validate the findings to guarantee the high accuracy and reliability of the mapping.
 
-- More info: [http://devseed.com/blog/2021-03-18-ai-enabling-school-mapping](http://devseed.com/blog/2021-03-18-ai-enabling-school-mapping)
-- Results: [http://devseed.com/project-connect-visualizations](http://devseed.com/project-connect-visualizations/)
+![Human Validation in Ghana](/assets/images/project_images/project_connect/pc3_ghana.gif)
+![Human Validation in Niger](/assets/images/project_images/project_connect/pc3_niger.gif)
+![Human Validation in Kenya](/assets/images/project_images/project_connect/pc3_kenya.gif)
+
+### Additional Resources
+
+- **Learn More**: [AI-Enabled School Mapping Blog](http://devseed.com/blog/2021-03-18-ai-enabling-school-mapping)
+- **View Results**: [Project Connect Visualizations](http://devseed.com/project-connect-visualizations/)
