@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "content": "yarn contentlayer build --verbose",
+    "content": "rm -rf .contentlayer/ && yarn contentlayer build --verbose",
     "dev": "next dev",
     "build": "yarn content && next build",
     "start": "yarn content && next start",

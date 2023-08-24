@@ -19,7 +19,7 @@ const computedFields = {
 
 export const Project = defineDocumentType(() => ({
     name: 'Project',
-    filePathPattern: `projects/*.md`,
+    filePathPattern: `project/*.md`,
     contentType: 'mdx',
     fields: {
         layout: {
@@ -30,11 +30,18 @@ export const Project = defineDocumentType(() => ({
             type: 'string',
             required: true,
         },
+        description: {
+            type: 'string',
+            required: true,
+        },
         live_url: {
             type: 'string',
 
         },
         github_url: {
+            type: 'string',
+        },
+        liveLink: {
             type: 'string',
         },
         tags: {
@@ -43,8 +50,11 @@ export const Project = defineDocumentType(() => ({
                 type: 'string',
             },
         },
-        technologies: {
-            type: 'string',
+        technologies:  {
+            type: 'list',
+            of: {
+                type: 'string',
+            },
         },
         img: {
             type: 'string',
@@ -58,12 +68,22 @@ export const Project = defineDocumentType(() => ({
         sponsor: {
             type: 'string',
         },
+        vid: {
+            type: 'string',
+        },
+        videos: {
+            type: 'list',
+            of: {
+                type: 'string',
+            },
+        }
+        
     },
     computedFields,
 }));
 
 export default makeSource({
-    contentDirPath: 'src/content',
+    contentDirPath: 'src/app/content',
     documentTypes: [Project],
     mdx: {
         remarkPlugins: [remarkGfm],

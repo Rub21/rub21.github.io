@@ -20,17 +20,19 @@ async function getProjectFromParams(slug: string) {
 const page = async ({ params }: PageProps) => {
   const project = await getProjectFromParams(params.slug);
   return (
-    <div>
-      <h1>{project.title}</h1>
-      <h1>{project.live_url}</h1>
-      <h1>{project.github_url}</h1>
-      <h1>{project.tags}</h1>
-      <h1>{project.technologies}</h1>
-      <h1>{project.img}</h1>
-      <h1>{project.images}</h1>
-      <h1>{project.sponsor}</h1>
+    <div className="h-[88vh] w-full mx-auto p-4">
+      <div>
+        <h1>{project.title}</h1>
+        <h1>{project.live_url}</h1>
+        <h1>{project.github_url}</h1>
+        <h1>{project.tags}</h1>
+        <h1>{project.technologies}</h1>
+        <h1>{project.img}</h1>
+        <h1>{project.images}</h1>
+        <h1>{project.sponsor}</h1>
 
-      <Markdown children={project.body.raw} />
+        <Markdown children={project.body.raw} />
+      </div>
     </div>
   );
 };
