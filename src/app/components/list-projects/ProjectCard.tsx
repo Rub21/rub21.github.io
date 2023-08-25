@@ -3,48 +3,12 @@ import React from "react";
 import { RiGithubLine } from "react-icons/ri";
 import { FiExternalLink } from "react-icons/fi";
 import { SlSocialYoutube } from "react-icons/sl";
-
 import { ImageProps } from "next/image";
 import Image from "next/image";
 import Link from "next/link";
 import VideoPlayer from "../VideoPlayer";
-// type Props = {
-//   image: ImageProps;
-//   title: string;
-//   description: string;
-//   slug: string,
-//   gitLink: string;
-//   youtubeLink: string;
-//   liveLink: string;
-//   techStackList: string[];
-//   imageUrl: string;
-// };
 
 const ProjectCard: React.FC = ({ project }) => {
-  // const overlayStyle = {
-  //   position: 'relative',
-  //   '::after': {
-  //     content: '""',
-  //     position: 'absolute',
-  //     top: 0,
-  //     right: 0,
-  //     bottom: 0,
-  //     left: 0,
-  //     backgroundColor: 'rgba(192, 77, 16, 0.884)',
-  //   },
-  // };
-
-  //   layout: post
-  // idnext: 1
-  // title: 'Tofix plugin for JOSM'
-  // github_url: https://github.com/JOSM/tofix
-  // liveLink: https://github.com/JOSM/tofix
-  // tags: [java,"java openstreetmap editor"]
-  // technologies: java, Java OpenStreetMap Editor.
-  // img: https://cloud.githubusercontent.com/assets/1152236/10491901/9b17bf5c-726e-11e5-9575-3c62d0412140.gif
-  // sponsor: "By [Mapbox](https://www.mapbox.com)"
-  // description:
-
   const divStyle = {
     backgroundImage: `url(${project.img})`,
   };
@@ -89,7 +53,7 @@ const ProjectCard: React.FC = ({ project }) => {
             {/* <p className="font-titleFont text-textGreen text-sm tracking-wide">
               Featured Project
             </p> */}
-            <h3 className="text-2xl font-bold hover:text-textGreen">
+            <h3 className="text-2xl font-bold pl-8 hover:text-textGreen">
               <Link href={project.slug}>
                 {/* {" "} */}
                 {project.title}{" "}

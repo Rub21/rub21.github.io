@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "CLI Tool to process Peru school data"
+title:  "Comand line tool to process Peru school data"
 liveLink: https://wiki.openstreetmap.org/wiki/Import/Catalogue/Peru/schools#Procesamiento_de_datos
 github_url: https://github.com/Rub21/process-peru-schools
 tags: [tile-reduce, turf, rbush, underscore]

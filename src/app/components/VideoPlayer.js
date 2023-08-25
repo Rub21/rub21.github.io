@@ -2,7 +2,7 @@
 function VideoPlayer({ src }) {
   console.log('%cVideoPlayer.js line:3 src', 'color: #007acc;', src);
   return (
-    <div>
+    <div className="bg-black rounded-lg ">
     <iframe
       src={src}
       width="500"

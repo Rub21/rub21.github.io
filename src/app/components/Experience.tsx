@@ -2,58 +2,19 @@
 
 import React, { useState } from "react";
 import SectionTitle from "./SectionTitle";
-import TeamLead from "./works/TeamLead";
-import QA from "./works/QA";
+import TeamLead from "./works/TeamLeed";
+import WorkSpaceAG from "./works/WorkSpaceAG";
 import Internship from "./works/Internship";
 import StartUp from "./works/StartUp";
 import WorkMapbox from "./works/WorkMapbox";
+import experiences from "./static/experiences";
+import WorkExperience from "./works/workExperience";
 
 const Experience = () => {
-  const [workTeamLead, setWorkTeamLead] = useState(true);
-  const [workQA, setWorkQA] = useState(false);
-  const [workInternship, setWorkInternship] = useState(false);
-  const [workStartUp, setWorkStartUp] = useState(false);
+  const [WorkDevSeed, setWorkDevSeed] = useState(true);
+  const [WorkMapbox2, setWorkMapbox2] = useState(false);
+  const [workSpaceAG, setworkSpaceAG] = useState(false);
   const [workMapbox, setworkMapbox] = useState(false);
-
-  const handleTeamLead = () => {
-    setWorkTeamLead(true);
-    setWorkQA(false);
-    setWorkInternship(false);
-    setWorkStartUp(false);
-    setworkMapbox(false);
-  };
-
-  const handleQA = () => {
-    setWorkTeamLead(false);
-    setWorkQA(true);
-    setWorkInternship(false);
-    setWorkStartUp(false);
-    setworkMapbox(false);
-  };
-
-  const handleInternship = () => {
-    setWorkTeamLead(false);
-    setWorkQA(false);
-    setWorkInternship(true);
-    setWorkStartUp(false);
-    setworkMapbox(false);
-  };
-
-  const handleStartUp = () => {
-    setWorkTeamLead(false);
-    setWorkQA(false);
-    setWorkInternship(false);
-    setWorkStartUp(true);
-    setworkMapbox(false);
-  };
-
-  // const handleworkMapbox = () => {
-  //   setWorkTeamLead(false);
-  //   setWorkQA(false);
-  //   setWorkInternship(false);
-  //   setWorkStartUp(false);
-  //   setworkMapbox(true);
-  // };
 
   return (
     <section
@@ -68,9 +29,14 @@ const Experience = () => {
           <ul className="flex whitespace-nowrap max-sml:w-6/12 max-sml:overflow-x-scroll max-sml:no-scrollbar sml:h-auto sml:flex-col">
             {/* ======================= Development Seed ======================= */}
             <li
-              onClick={handleTeamLead}
+              onClick={() => {
+                setWorkDevSeed(true);
+                setworkSpaceAG(false);
+                setWorkMapbox2(false);
+                setworkMapbox(false);
+              }}
               className={`${
-                workTeamLead
+                WorkDevSeed
                   ? "border-l-textGreen text-textGreen"
                   : "border-l-hoverColor : text-textDark"
               } border-l-2 border-l-textGreen text-textDark bg-transparent hover:bg-[#112240] py-3 text-xs cursor-pointer duration-300 px-8 font-medium md:text-sm `}
@@ -82,9 +48,14 @@ const Experience = () => {
 
             {/* ======================= Mapbox (Manager) =======================*/}
             <li
-              onClick={handleInternship}
+              onClick={() => {
+                setWorkDevSeed(false);
+                setworkSpaceAG(false);
+                setWorkMapbox2(true);
+                setworkMapbox(false);
+              }}
               className={`${
-                workInternship
+                WorkMapbox2
                   ? "border-l-textGreen text-textGreen"
                   : "border-l-hoverColor : text-textDark"
               } border-l-2 border-l-textGreen text-textDark bg-transparent hover:bg-[#112240] py-3 text-xs cursor-pointer duration-300 px-8 font-medium md:text-sm `}
@@ -96,9 +67,14 @@ const Experience = () => {
 
             {/* ======================= Space AG ======================= */}
             <li
-              onClick={handleQA}
+              onClick={() => {
+                setWorkDevSeed(false);
+                setworkSpaceAG(true);
+                setWorkMapbox2(false);
+                setworkMapbox(false);
+              }}
               className={`${
-                workQA
+                workSpaceAG
                   ? "border-l-textGreen text-textGreen"
                   : "border-l-hoverColor : text-textDark"
               } border-l-2 border-l-textGreen text-textDark bg-transparent hover:bg-[#112240] py-3 text-xs cursor-pointer duration-300 px-8 font-medium md:text-sm `}
@@ -111,10 +87,9 @@ const Experience = () => {
 
             <li
               onClick={() => {
-                setWorkTeamLead(false);
-                setWorkQA(false);
-                setWorkInternship(false);
-                setWorkStartUp(false);
+                setWorkDevSeed(false);
+                setworkSpaceAG(false);
+                setWorkMapbox2(false);
                 setworkMapbox(true);
               }}
               className={`${
@@ -131,16 +106,13 @@ const Experience = () => {
         </div>
 
         {/* Work information */}
-        {workTeamLead && <TeamLead />}
-        {workQA && <QA />}
-        {workInternship && <Internship />}
-        {workStartUp && <StartUp />}
-        {workMapbox && <WorkMapbox />}
+        {WorkDevSeed && <WorkExperience workExp={experiences[3]} />}
+        {WorkMapbox2 && <WorkExperience workExp={experiences[2]} />}
+        {workSpaceAG && <WorkExperience workExp={experiences[1]} />}
+        {workMapbox && <WorkExperience workExp={experiences[0]} />}
       </div>
     </section>
   );
 };
 
 export default Experience;
-
-// I need to create a media querey that will turn the bar horizontally for mobile viewing...

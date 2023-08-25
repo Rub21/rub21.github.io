@@ -64,7 +64,7 @@ const ProjectCardReversed: React.FC = ({ project }) => {
             {/* <p className="font-titleFont text-textGreen text-sm tracking-wide">
               Featured Project
             </p> */}
-            <h3 className="text-2xl font-bold hover:text-textGreen">
+            <h3 className="text-2xl font-bold pr-8 hover:text-textGreen">
               {project.title}
             </h3>
 
