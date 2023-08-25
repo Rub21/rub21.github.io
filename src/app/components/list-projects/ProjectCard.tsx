@@ -107,8 +107,10 @@ const ProjectCard: React.FC = ({ project }) => {
               Featured Project
             </p>
             <h3 className="font-titleFont text-2xl font-bold hover:text-textGreen">
-              {" "}
-              {project.title}{" "}
+            <Link href={project.slug}>
+                {/* {" "} */}
+                {project.title}{" "}
+              </Link>
             </h3>
 
             {/* description block */}

@@ -3,21 +3,12 @@ import React from "react";
 import { RiGithubLine } from "react-icons/ri";
 import { FiExternalLink } from "react-icons/fi";
 import { SlSocialYoutube } from "react-icons/sl";
+import Link from "next/link";
 
 import { ImageProps } from "next/image";
 import Image from "next/image";
 import VideoPlayer from "../VideoPlayer";
 
-// type Props = {
-//   image: ImageProps;
-//   title: string;
-//   description: string;
-//   gitLink: string;
-//   youtubeLink: string;
-//   liveLink: string;
-//   techStackList: string[];
-//   imageUrl: string;
-// };
 
 const ProjectCardReversed: React.FC = ({ project }) => {
   const divStyle = {
@@ -65,7 +56,9 @@ const ProjectCardReversed: React.FC = ({ project }) => {
               Featured Project
             </p> */}
             <h3 className="text-2xl font-bold pr-8 hover:text-textGreen">
-              {project.title}
+            <Link href={project.slug}>
+                {project.title}{" "}
+              </Link>
             </h3>
 
             {/* description block */}
@@ -114,8 +107,9 @@ const ProjectCardReversed: React.FC = ({ project }) => {
               Featured Project
             </p>
             <h3 className="font-titleFont text-2xl font-bold hover:text-textGreen">
-              {" "}
-              {project.title}{" "}
+               <Link href={project.slug}>
+                {project.title}{" "}
+              </Link>
             </h3>
 
             {/* description block */}
