@@ -1,5 +1,5 @@
 import logo from "./images/LogoBig.png";
-import profileImg from "./images/Devon.jpg";
+import profileImg from "./images/me.jpg";
 import profileImgCircle from "./images/me.jpg";
 
 import FaceDetection from "./images/ProjectPictures/FaceDetection.png";

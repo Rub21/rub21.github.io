@@ -58,47 +58,42 @@ function Navbar() {
           <ul className="flex text-[13] gap-7">
             {/* HOME */}
             <Link
-              href="#home"
-              onClick={handleScroll}
+              href="/"
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
             >
-              <motion.li
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                Home
-              </motion.li>
+              Home
             </Link>
             {/* ABOUT */}
             <Link
-              href="#about"
-              onClick={handleScroll}
+              href="/about"
+              // onClick={handleScroll}
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
             >
-              <motion.li
+              About
+              {/* <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.25 }}
               >
                 <span className="text-textGreen">01.</span>
                 About
-              </motion.li>
+              </motion.li> */}
             </Link>
             {/* EXPERIENCE */}
             <Link
-              href="#Experience"
-              onClick={handleScroll}
+              href="/experience"
+              // onClick={handleScroll}
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
             >
-              <motion.li
+              Experience
+              {/* <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
                 <span className="text-textGreen">02.</span>
                 Experience
-              </motion.li>
+              </motion.li> */}
             </Link>
             {/* PROJECTS */}
             <Link

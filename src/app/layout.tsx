@@ -1,18 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Head from "next/head";
 import Navbar from "./components/Navbar";
 import LeftSide from "./components/LeftSide";
-import Image from "next/image";
 import RightSide from "./components/RightSide";
-import Banner from "./components/Banner";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import BigProjects from "./components/list-projects/ListProjects";
-import SmallProjects from "./components/small-projects/SmallProjects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 

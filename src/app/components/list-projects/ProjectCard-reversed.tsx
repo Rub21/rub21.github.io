@@ -9,7 +9,6 @@ import { ImageProps } from "next/image";
 import Image from "next/image";
 import VideoPlayer from "../VideoPlayer";
 
-
 const ProjectCardReversed: React.FC = ({ project }) => {
   const divStyle = {
     backgroundImage: `url(${project.img})`,
@@ -56,9 +55,7 @@ const ProjectCardReversed: React.FC = ({ project }) => {
               Featured Project
             </p> */}
             <h3 className="text-2xl font-bold pr-8 hover:text-textGreen">
-            <Link href={project.slug}>
-                {project.title}{" "}
-              </Link>
+              <Link href={project.slug}>{project.title} </Link>
             </h3>
 
             {/* description block */}
@@ -107,9 +104,7 @@ const ProjectCardReversed: React.FC = ({ project }) => {
               Featured Project
             </p>
             <h3 className="font-titleFont text-2xl font-bold hover:text-textGreen">
-               <Link href={project.slug}>
-                {project.title}{" "}
-              </Link>
+              <Link href={project.slug}>{project.title} </Link>
             </h3>
 
             {/* description block */}
