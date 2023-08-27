@@ -97,33 +97,18 @@ function Navbar() {
             </Link>
             {/* PROJECTS */}
             <Link
-              href="#Projects"
-              onClick={handleScroll}
+              href="/project"
+              // onClick={handleScroll}
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
             >
-              <motion.li
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.75 }}
-              >
-                <span className="text-textGreen">03.</span>
-                Projects
-              </motion.li>
+              Projects
             </Link>
             {/* CONTACT */}
             <Link
-              href="#contact"
-              onClick={handleScroll}
+              href="/contact"
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
             >
-              <motion.li
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 1 }}
-              >
-                <span className="text-textGreen">04.</span>
-                Contact
-              </motion.li>
+              Contact
             </Link>
           </ul>
           {/* RESUME BUTTON */}

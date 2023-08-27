@@ -5,7 +5,7 @@ import RightSide from "./components/RightSide";
 import Banner from "./components/Banner";
 import About from "./components/About";
 // import Experience from "./experience/Experience";
-import BigProjects from "./components/list-projects/ListProjects";
+import BigProjects from "./project/page";
 import SmallProjects from "./components/small-projects/SmallProjects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -16,9 +16,9 @@ export default function Home() {
       <Banner />
       {/* <About /> */}
       {/* <Experience /> */}
-      <BigProjects />
+      {/* <BigProjects /> */}
       <SmallProjects />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </div>
   );
