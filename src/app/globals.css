@@ -93,6 +93,8 @@
   }
 
   .markdown ul {
+    @apply mt-0 mb-4 text-sm sm:text-base text-textDark font-medium;
+
     list-style-type: disc;
     list-style-position: inside;
     margin-top: 1rem;
