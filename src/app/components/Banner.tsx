@@ -3,19 +3,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Typewriter, { Options } from "typewriter-effect";
+import Link from "next/link";
 
 const Banner = () => {
   const options: Options = {
     strings: [
-      "    ",
-      "Full-Stack Developer",
-      "Quality Engineer",
+      "Data Engineer",
       "React Developer",
       "Python Enthusiast",
       "Next.js Developer",
       "Web Developer",
-      "Future Senior Dev",
-      "Aspiring Principal Engineer",
+      "OpenSteetMap mapper",
     ],
     autoStart: true,
     loop: true,
@@ -29,16 +27,16 @@ const Banner = () => {
       {/* Hello World Heading */}
       <motion.h3
         className="text-xs md:text-lg font-codeFont tracking-wide text-textGreen"
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0.8 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 2 }}
       >
-        Hello World, my name is
+        {"Full-Stack Developer"}
       </motion.h3>
 
       {/* Name heading & Auto-Typing Array heading*/}
       <motion.h1
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0.8 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 2.2 }}
         className="text-3xl md:text-4xl lgl:text-6xl font-titleFont font-semibold flex flex-col"
@@ -51,17 +49,20 @@ const Banner = () => {
 
       {/* Introductory Text */}
       <motion.p
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0.8 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 2.4 }}
         className="text-sm sml:text-base text-textDark font-medium"
       >
         {" "}
-        I am a Full-Stack developer specializing in geographic information
-        systems and machine learning-based data processing. I was drawn to
-        programming by a passion for automation—it's magical to see how code can
-        simplify life. I have an insatiable appetite for continued learning in
-        this ever-evolving field.
+        I am a Full-Stack developer with a focus on Geographic Information
+        Systems (GIS) and machine learning-based data processing. Driven by a
+        passion for automation, I have international experience in creating
+        tools and pipelines to manage large volumes of vector data for machine
+        learning and cartography. My skill set includes geodata analysis,
+        visualization, DevOps, and full-stack development. I am a strong
+        advocate for open-source technologies and open data in application
+        development.
         <br />
         <br />
         <a href="https://www.linkedin.com/in/rub21/" target="_blank">
@@ -73,17 +74,16 @@ const Banner = () => {
         </a>
       </motion.p>
 
-      {/* Button */}
-      <a href="#Experiences">
+      <Link href="/project">
         <motion.button
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0.8 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 2.5 }}
           className="w-40 h-10 text-xs sml:w-52 sml:h-14 sml:text-sm font-titleFont border border-textGreen rounded-md text-textGreen tracking-wide hover:bg-hoverColor duration-300"
         >
           Check out my Projects
         </motion.button>
-      </a>
+      </Link>
     </section>
   );
 };

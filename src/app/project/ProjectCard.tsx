@@ -39,7 +39,7 @@ const ProjectCard = ({ project }) => {
         </div>
       </CardHeader>
       <CardBody>
-        <div className="mb-3 flex items-center justify-between h-[50px]">
+        <div className="mb-3 flex items-center justify-between h-[50px] px-4  pt-2">
           <Typography variant="h5" color="blue-gray" className="font-medium">
             <Link href={project.slug}>{project.title}</Link>
           </Typography>
@@ -67,13 +67,13 @@ const ProjectCard = ({ project }) => {
           initial={{ opacity: 0.8 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 2.4 }}
-          className="text-sm sml:text-base text-textDark font-medium max-h-[100px] overflow-auto"
+          className="text-sm sml:text-base text-textDark font-medium max-h-[100px] h-[100px] overflow-auto px-4"
         >
           {project.description.split(" ").slice(0, 20).join(" ") +
             (project.description.split(" ").length > 20 ? "..." : "")}
         </motion.p>
 
-        <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+        <div className="group mt-8 inline-flex flex-wrap items-center gap-3 px-4">
           <ul className="text-xs font-codeFont tracking-wide flex gap-5 text-textGreen">
             {project.technologies.map((item, i) => (
               <li key={i}>{item}</li>
@@ -85,8 +85,7 @@ const ProjectCard = ({ project }) => {
         {/* <Button size="lg" fullWidth={true}>
           Reserve
         </Button> */}
-
-        <a href="#Experiences">
+        <Link href={project.slug}>
           <motion.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -95,7 +94,7 @@ const ProjectCard = ({ project }) => {
           >
             Read more
           </motion.button>
-        </a>
+        </Link>
       </CardFooter>
     </Card>
   );

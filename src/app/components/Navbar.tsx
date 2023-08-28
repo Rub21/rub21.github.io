@@ -13,23 +13,6 @@ import { TiSocialInstagram } from "react-icons/ti";
 function Navbar() {
   const ref = useRef<string | any>("");
   const [showMenu, setShowMenu] = useState(false);
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
-    setShowMenu(false);
-    const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
-    const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({
-      behavior: "smooth",
-    });
-
-    //Updating the class name of the clicked link
-    const links = document.querySelectorAll(".nav-link");
-    links.forEach((link) => {
-      link.classList.remove("active");
-    });
-    e.currentTarget.classList.add("active");
-  };
 
   function handleClick(e: any) {
     if (e.target.contains(ref.current)) {
@@ -41,19 +24,14 @@ function Navbar() {
   return (
     <div className="w-full shadow-navbarShadow h-18 lg:h-[06vh] sticky top-0 z-50 bg-bodyColor px-4">
       <div className="max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <a className="hover:animate-spin" href="#home">
-            <Image
-              className="w-12 pt-2 rounded-full sml:w-16 hover:animate-spin"
-              src={logo}
-              alt="logo"
-            />
-          </a>
-        </motion.div>
+        <Link href="/">
+          <Image
+            className="pt-2 rounded-full sml:w-16 h-12 w-6"
+            src={logo}
+            alt="logo"
+          />
+        </Link>
+
         <div className="hidden mdl:inline-flex items-center gap-7">
           <ul className="flex text-[13] gap-7">
             {/* HOME */}
@@ -66,39 +44,20 @@ function Navbar() {
             {/* ABOUT */}
             <Link
               href="/about"
-              // onClick={handleScroll}
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
             >
               About
-              {/* <motion.li
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.25 }}
-              >
-                <span className="text-textGreen">01.</span>
-                About
-              </motion.li> */}
             </Link>
             {/* EXPERIENCE */}
             <Link
               href="/experience"
-              // onClick={handleScroll}
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
             >
               Experience
-              {/* <motion.li
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-              >
-                <span className="text-textGreen">02.</span>
-                Experience
-              </motion.li> */}
             </Link>
             {/* PROJECTS */}
             <Link
               href="/project"
-              // onClick={handleScroll}
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
             >
               Projects
@@ -159,8 +118,7 @@ function Navbar() {
                 <ul className="flex flex-col text-base gap-12 items-left pt-12">
                   {/* HOME */}
                   <Link
-                    href="#home"
-                    onClick={handleScroll}
+                    href="/"
                     className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link "
                   >
                     <motion.li
@@ -178,8 +136,7 @@ function Navbar() {
 
                   {/* ABOUT */}
                   <Link
-                    href="#about"
-                    onClick={handleScroll}
+                    href="/about"
                     className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
                   >
                     <motion.li
@@ -191,14 +148,12 @@ function Navbar() {
                         ease: "easeIn",
                       }}
                     >
-                      <span className="text-textGreen"> 01. </span>
                       About
                     </motion.li>
                   </Link>
                   {/* EXPERIENCE */}
                   <Link
-                    href="#Experience"
-                    onClick={handleScroll}
+                    href="/experience"
                     className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
                   >
                     <motion.li
@@ -210,14 +165,12 @@ function Navbar() {
                         ease: "easeIn",
                       }}
                     >
-                      <span className="text-textGreen">02. </span>
                       Experience
                     </motion.li>
                   </Link>
                   {/* PROJECTS */}
                   <Link
-                    href="#Projects"
-                    onClick={handleScroll}
+                    href="/project"
                     className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
                   >
                     <motion.li
@@ -229,14 +182,12 @@ function Navbar() {
                         ease: "easeIn",
                       }}
                     >
-                      <span className="text-textGreen">03. </span>
                       Projects
                     </motion.li>
                   </Link>
                   {/* CONTACT */}
                   <Link
-                    href="#contact"
-                    onClick={handleScroll}
+                    href="/contact"
                     className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
                   >
                     <motion.li
@@ -248,7 +199,6 @@ function Navbar() {
                         ease: "easeIn",
                       }}
                     >
-                      <span className="text-textGreen">04. </span>
                       Contact
                     </motion.li>
                   </Link>
@@ -279,7 +229,7 @@ function Navbar() {
                       delay: 1,
                       ease: "easeIn",
                     }}
-                    href="https://github.com/DevonGifford"
+                    href="https://github.com/Rub21"
                     target="_blank"
                   >
                     <span className="w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
@@ -296,7 +246,7 @@ function Navbar() {
                       delay: 1.2,
                       ease: "easeIn",
                     }}
-                    href="https://www.linkedin.com/in/dbgifford/"
+                    href="https://www.linkedin.com/in/rub2106/"
                     target="_blank"
                   >
                     <span className="w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
@@ -313,7 +263,7 @@ function Navbar() {
                       delay: 1.4,
                       ease: "easeIn",
                     }}
-                    href="https://twitter.com/devon_gifford"
+                    href="https://twitter.com/rub21m"
                     target="_blank"
                   >
                     <span className="w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
@@ -330,7 +280,7 @@ function Navbar() {
                       delay: 1.6,
                       ease: "easeIn",
                     }}
-                    href="https://www.instagram.com/princedevon_za/"
+                    href="https://www.instagram.com/rub2106/"
                     target="_blank"
                   >
                     <span className="w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
