@@ -28,6 +28,7 @@ images:
 sponsor: 'By [DevSeed](http://devseed.com/)'
 description: "I serve as an Infrastructure Developer in OpenHistoricalMap project, which is hosted on Amazon Web Services (AWS) and utilizes Kubernetes for orchestrating Docker containers. For those interested in the technical details, the source code is publicly available on GitHub."
 ---
+# Mapping Inca Empire Boundaries - OpenHistoricalMap
 
 I serve as an Infrastructure Developer in OpenHistoricalMap project, which is hosted on Amazon Web Services (AWS) and utilizes Kubernetes for orchestrating Docker containers. For those interested in the technical details, the source code is publicly available on GitHub. 
 
