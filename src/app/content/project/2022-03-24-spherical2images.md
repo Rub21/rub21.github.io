@@ -25,5 +25,3 @@ Spherical2Images is a tool that allows you to split spherical images from Mapill
 ## Results
 
 ![](/assets/images/project_images/spherical2images-2.jpg)
-
-
