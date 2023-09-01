@@ -4,7 +4,6 @@ import Link from "next/link";
 import VideoPlayer from "../components/VideoPlayer";
 import { motion } from "framer-motion";
 import { RiGithubLine } from "react-icons/ri";
-import { PiStarThin } from "react-icons/pi";
 import { BsRocketTakeoffFill } from "react-icons/bs";
 
 import { FiExternalLink } from "react-icons/fi";
@@ -14,18 +13,15 @@ import {
   CardBody,
   CardFooter,
   Typography,
-  Button,
-  Tooltip,
-  IconButton,
 } from "@material-tailwind/react";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project }: { project: any }) => {
   return (
     <Card className="w-full max-w-[26rem] shadow-lg shadow-navbarShadow bg-bodyColor">
       <CardHeader floated={false} color="blue-gray">
         <div className="relative h-[300px] overflow-hidden rounded-lg bg-black">
           {project.img ? (
-            <img
+            <Image
               src={project.img}
               alt="ui/ux review check"
               className="w-full h-full object-contain rounded-lg"
@@ -48,6 +44,7 @@ const ProjectCard = ({ project }) => {
             className="flex items-center gap-1.5 font-normal"
           >
             <a
+              key={"1"}
               className="hover:text-textGreen duration-300"
               href={project.github_url}
               target="_blank"
@@ -55,6 +52,7 @@ const ProjectCard = ({ project }) => {
               <RiGithubLine />
             </a>
             <a
+              key={"2"}
               className="hover:text-textGreen duration-300"
               href={project.liveLink}
               target="_blank"
@@ -75,7 +73,7 @@ const ProjectCard = ({ project }) => {
 
         <div className="group mt-8 inline-flex flex-wrap items-center gap-3 px-4">
           <ul className="text-xs font-codeFont tracking-wide flex gap-5 text-textGreen">
-            {project.technologies.map((item, i) => (
+            {project.technologies.map(({ item }: { item: any }, i: number) => (
               <li key={i}>{item}</li>
             ))}
           </ul>

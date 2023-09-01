@@ -7,7 +7,7 @@ function BookingCard() {
   return (
     <div className="h-[88vh] mx-auto px-10 pb-10 flex flex-wrap justify-center gap-2 mb-10">
       {allProjects_.map((project: unknown, index) => {
-        return <ProjectCard project={project}></ProjectCard>;
+        return <ProjectCard key={index} project={project}></ProjectCard>;
       })}
     </div>
   );

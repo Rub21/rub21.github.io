@@ -38,7 +38,7 @@ const About = () => {
                 volumes of vector data, specifically for machine learning and
                 cartography applications. My areas of expertise encompass
                 geodata analysis, geodata visualization, DevOps, and full-stack
-                development. I'm an enthusiastic advocate of open-source
+                development. I am an enthusiastic advocate of open-source
                 technologies and open data, which are my go-to resources for
                 application development.
                 <br /> <br />I am an active member of the OpenStreetMap
@@ -72,22 +72,32 @@ const About = () => {
               The Technologies skills:
             </p>
 
-            {Skills.map((field) => (
-              <div className="flex flex-row items-center m-4">
+            {Skills.map((field, index) => (
+              <div key={index} className="flex flex-row items-center m-4">
                 <p className="pb-5 font-codeFont w-20 text-textDark font-bold text-left text-sm lg:text-base ml-3 mt-1">
                   {field.name}
                 </p>
                 <ul className="flex flex-row flex-wrap gap-4 ml-5 -mt-5 justify-center">
-                  {field.types.map((t) => (
-                    <li className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300">
-                      <Image
-                        className="rounded-full w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
-                        src={t.src}
-                        alt={t.skill_name}
-                        title={t.skill_name}
-                      />
-                    </li>
-                  ))}
+                  {field && field.types
+                    ? field.types.map((type_, i) => {
+                        if (type_ && type_.src && type_.skill_name) {
+                          return (
+                            <li
+                              key={i}
+                              className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300"
+                            >
+                              <Image
+                                className="rounded-full w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
+                                src={type_.src}
+                                alt={type_.skill_name}
+                                title={type_.skill_name}
+                              />
+                            </li>
+                          );
+                        }
+                        return null;
+                      })
+                    : null}
                 </ul>
               </div>
             ))}

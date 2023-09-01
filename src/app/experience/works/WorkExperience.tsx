@@ -2,12 +2,21 @@ import React from "react";
 import { motion } from "framer-motion";
 import BulletPoint from "./BulletPoint";
 
-const WorkExperience = ({ workExp }) => {
-  console.log(
-    "%cworkExperience.tsx line:6 workExp",
-    "color: #007acc;",
-    workExp
-  );
+interface WorkExp {
+  name: string;
+  date: string;
+  description: string;
+  tasks: {
+    name: string;
+    description: string;
+  }[];
+}
+
+interface Props {
+  workExp: WorkExp;
+}
+
+const WorkExperience: React.FC<Props> = ({ workExp }) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -32,12 +41,17 @@ const WorkExperience = ({ workExp }) => {
       </p>
       {/* Bullet Points */}
       <ul className="mt-4 flex flex-col gap-3 text-textDark">
-        {workExp.tasks.map((task) => (
-          <BulletPoint
-            headningText={task.name}
-            contentText={task.description}
-          />
-        ))}
+        {workExp.tasks.map(
+          (task: { name: string; description: string }, index: number) => {
+            return (
+              <BulletPoint
+                key={index}
+                headningText={task.name}
+                contentText={task.description}
+              />
+            );
+          }
+        )}
       </ul>
     </motion.div>
   );
