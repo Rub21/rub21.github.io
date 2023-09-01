@@ -20,7 +20,7 @@ async function getProjectFromParams(slug: string) {
 const page = async ({ params }: PageProps) => {
   const project = await getProjectFromParams(params.slug);
   return (
-    <div className="h-[88vh] max-w-[800px] w-full mx-auto p-4">
+    <div className="h-[88vh] max-w-[800px] w-full mx-auto p-4 mb-10">
       <ReactMarkdown className="markdown">{project.body.raw}</ReactMarkdown>
     </div>
   );
