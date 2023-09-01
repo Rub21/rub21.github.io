@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import VideoPlayer from "../components/VideoPlayer";
 import { motion } from "framer-motion";
 import { RiGithubLine } from "react-icons/ri";
 import { BsRocketTakeoffFill } from "react-icons/bs";
+import ReactMarkdown from "react-markdown";
 
 import { FiExternalLink } from "react-icons/fi";
 import {
@@ -16,14 +17,22 @@ import {
 } from "@material-tailwind/react";
 
 const ProjectCard = ({ project }: { project: any }) => {
+  const [showModal, setShowModal] = useState(false);
+
+  function handleModal() {
+    setShowModal(!showModal);
+  }
+
   return (
     <Card className="w-full max-w-[26rem] shadow-lg shadow-navbarShadow bg-bodyColor">
       <CardHeader floated={false} color="blue-gray">
-        <div className="relative h-[300px] overflow-hidden rounded-lg bg-black">
+        <div className="relative h-[300px] overflow-hidden bg-black px-2">
           {project.img ? (
-            <Image
+            <img
               src={project.img}
               alt="ui/ux review check"
+              // width={}
+              onClick={handleModal}
               className="w-full h-full object-contain rounded-lg"
             />
           ) : (
@@ -36,8 +45,10 @@ const ProjectCard = ({ project }: { project: any }) => {
       </CardHeader>
       <CardBody>
         <div className="mb-3 flex items-center justify-between h-[50px] px-4  pt-2">
-          <Typography variant="h5" color="blue-gray" className="font-medium">
-            <Link href={project.slug}>{project.title}</Link>
+          <Typography  variant="h5" color="blue-gray" className="font-medium">
+            <Link className="text-textGreen" href="" onClick={handleModal}>
+              {project.title}
+            </Link>
           </Typography>
           <Typography
             color="blue-gray"
@@ -68,22 +79,20 @@ const ProjectCard = ({ project }: { project: any }) => {
           className="text-sm sml:text-base text-textDark font-medium max-h-[100px] h-[100px] overflow-auto px-4"
         >
           {project.description.split(" ").slice(0, 20).join(" ") +
-            (project.description.split(" ").length > 20 ? "..." : "")}
+            (project.description.split(" ").length > 30 ? "..." : "")}
         </motion.p>
 
-        <div className="group mt-8 inline-flex flex-wrap items-center gap-3 px-4">
+        <div className="group mt-1 inline-flex flex-wrap items-center gap-3 px-4">
           <ul className="text-xs font-codeFont tracking-wide flex gap-5 text-textGreen">
-            {project.technologies.map(({ item }: { item: any }, i: number) => (
+            {project.technologies.map((item: string, i: number) => (
               <li key={i}>{item}</li>
             ))}
           </ul>
         </div>
       </CardBody>
-      <CardFooter className="pt-3">
-        {/* <Button size="lg" fullWidth={true}>
-          Reserve
-        </Button> */}
-        <Link href={project.slug}>
+      {/* <CardFooter className="pt-3">
+  
+         <Link href={project.slug}>
           <motion.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -92,8 +101,30 @@ const ProjectCard = ({ project }: { project: any }) => {
           >
             Read more
           </motion.button>
-        </Link>
-      </CardFooter>
+        </Link> 
+      </CardFooter> */}
+      {showModal && (
+        <div
+          onClick={handleModal}
+          className="fixed mt-10 inset-0 bg-black bg-opacity-90 flex items-center justify-center z-40"
+        >
+          <div className="fixed left-1/2 transform -translate-x-1/2 z-50 ">
+            <div className="bg-white rounded-lg shadow-lg relative">
+              <button
+                className="absolute top-2 right-2 text-lg font-bold hover:text-gray-700"
+                onClick={handleModal}
+              >
+                ×
+              </button>
+              <div className="max-w-[900px] w-full mx-auto p-6 overflow-y-auto h-[88vh] shadow-lg shadow-navbarShadow bg-bodyColor">
+                <ReactMarkdown className="markdown">
+                  {project.body.raw}
+                </ReactMarkdown>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </Card>
   );
 };
