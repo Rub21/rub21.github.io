@@ -3,8 +3,8 @@ layout: post
 title: 'DS-annotate'
 github_url: https://github.com/developmentseed/ds-annotate
 liveLink: https://devseed.com/ds-annotate/
-tags: [Rect]
-technologies: [Rect,AI]
+tags: [React]
+technologies: [React,AI]
 img: assets/images/project_images/ds-annotate.gif
 images:
   [

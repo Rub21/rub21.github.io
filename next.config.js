@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     domains: ['user-images.githubusercontent.com', 'miro.medium.com', "cloud.githubusercontent.com"],
   },
-  output: 'export',
+  // output: 'export',
 }
 
 module.exports = nextConfig
