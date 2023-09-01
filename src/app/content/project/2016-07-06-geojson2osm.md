@@ -1,9 +1,8 @@
 ---
 layout: post
-title:  'geojson2osm'
+title:  Geojson to OSM
 liveLink: https://www.npmjs.com/package/geojson2osm
 github_url: https://github.com/Rub21/geojson2osm
-https://github.com/JOSM/osm-obj-info
 tags: [node.js]
 technologies: [Node.js]
 img: https://user-images.githubusercontent.com/1152236/41137566-600e5e9c-6aa1-11e8-945e-fd25663e5dba.png

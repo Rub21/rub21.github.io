@@ -1,6 +1,5 @@
 ---
 layout: post
-idnext: 1
 title:  "Tofix Backend"
 github_url: https://github.com/osmlab/to-fix-backend
 liveLink: https://github.com/osmlab/to-fix-backend

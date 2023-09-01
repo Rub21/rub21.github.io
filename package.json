@@ -9,7 +9,7 @@
     "start": "yarn content && next start",
     "clean": "rimraf build/",
     "lint": "next lint",
-    "deploy": "yarn content && yarn clean && PUBLIC_URL=/ds-annotate REACT_APP_ENV=production yarn build && gh-pages -d build",
+    "deploy": "yarn content && yarn clean && PUBLIC_URL=/ REACT_APP_ENV=production yarn build && gh-pages -d out",
     "prettier": "yarn content && yarn clean && prettier --write 'src/**/*.tsx'"
   },
   "dependencies": {
