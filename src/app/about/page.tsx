@@ -33,16 +33,21 @@ const About = () => {
               </div>
 
               <p>
-                As a dedicated programmer with international experience, I
-                specialize in developing tools and pipelines for managing large
-                volumes of vector data, specifically for machine learning and
-                cartography applications. My areas of expertise encompass
-                geodata analysis, geodata visualization, DevOps, and full-stack
-                development. I am an enthusiastic advocate of open-source
-                technologies and open data, which are my go-to resources for
-                application development.
-                <br /> <br />I am an active member of the OpenStreetMap
-                community, known there as Rub21.
+                <span>
+                  Hi! I’m a programmer, focused on building tools and pipelines
+                  to manage large amounts of vector data for machine learning
+                  and mapping projects. I work with geodata analysis,
+                  visualization, cloud infrastructure, DevOps, and full-stack
+                  development.
+                </span>
+                <br />
+                <span>
+                  In my role as a cloud engineer, I manage and deploy scalable
+                  systems using Kubernetes for platforms like OpenHistoricalMap,
+                  OSM-US, and Palestine Maps. I also integrate machine learning
+                  models into APIs to make data processing easier and more
+                  accurate.
+                </span>
               </p>
             </div>
           </div>
@@ -69,7 +74,7 @@ const About = () => {
           {/* Skill Logo's */}
           <div className="row-start-3 col-span-full pt-5 ">
             <p className="pb-5 font-codeFont text-textDark font-bold text-left text-sm lg:text-base ">
-              The Technologies skills:
+              My kills:
             </p>
 
             {Skills.map((field, index) => (

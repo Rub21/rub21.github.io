@@ -8,12 +8,11 @@ import Link from "next/link";
 const Banner = () => {
   const options: Options = {
     strings: [
+      "Cloud Engineer",
       "Data Engineer",
       "React Developer",
-      "Python Enthusiast",
+      "Python Developer",
       "Next.js Developer",
-      "Web Developer",
-      "OpenSteetMap mapper",
     ],
     autoStart: true,
     loop: true,
@@ -31,7 +30,7 @@ const Banner = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 2 }}
       >
-        {"Full-Stack Developer"}
+        {"Cloud Engineer & Data Engineer"}
       </motion.h3>
 
       {/* Name heading & Auto-Typing Array heading*/}
@@ -55,14 +54,12 @@ const Banner = () => {
         className="text-sm sml:text-base text-textDark font-medium"
       >
         {" "}
-        I am a Full-Stack developer with a focus on Geographic Information
-        Systems (GIS) and machine learning-based data processing. Driven by a
-        passion for automation, I have international experience in creating
-        tools and pipelines to manage large volumes of vector data for machine
-        learning and cartography. My skill set includes geodata analysis,
-        visualization, DevOps, and full-stack development. I am a strong
-        advocate for open-source technologies and open data in application
-        development.
+        Hi, I am a Cloud and Data Engineer specializing in managing and processing
+        large geospatial datasets for machine learning and GIS applications. I
+        build scalable cloud infrastructures using Kubernetes and develop tools
+        and pipelines for efficient data processing. My expertise includes
+        geodata analysis, automation, and integrating machine learning models
+        into APIs.
         <br />
         <br />
         <a href="https://www.linkedin.com/in/rub21/" target="_blank">

@@ -35,10 +35,11 @@ const WorkExperience: React.FC<Props> = ({ workExp }) => {
       <p className="mt-3 text-base font-light flex gap-2 text-textDark">
         <strong>
           {workExp.description}
-          <br />
-          Some of my key accomplishments in this role include:
         </strong>
       </p>
+      <br />
+          <br />
+          Tasks:
       {/* Bullet Points */}
       <ul className="mt-4 flex flex-col gap-3 text-textDark">
         {workExp.tasks.map(
