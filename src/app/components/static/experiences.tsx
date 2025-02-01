@@ -76,13 +76,13 @@ const experiences = [
     ],
   },
   {
-    name: "Personnel Management for Mapbox's Data Team in Peru",
+    name: "Team Management for Mapbox’s Data Team in Peru",
     date: "January 2017 - January 2018",
     description:
       "I served as a manager for the data team at Mapbox in Peru. Our team was known for producing high-quality data at a rapid pace, comparable to industry leaders like Amazon and Facebook, as reported by Bloomberg on February 19, 2021.",
     tasks: [
       {
-        name: "Personnel Management",
+        name: "Team Management",
         description:
           "I oversaw hiring, onboarding, training, performance evaluation, and daily management tasks to ensure team efficiency.",
       },
@@ -122,7 +122,7 @@ const experiences = [
     ],
   },
   {
-    name: "Cloud  Engineer & Data Engineer",
+    name: "Cloud  & Data Engineer",
     date: "January 2024 -  Present",
     description:
       "Currently, I am working as a Cloud Engineer, supporting platforms for OpenHistoricalMap, OSM-US, and Palestine Maps. My experience in Kubernetes and past OpenStreetMap platforms has been key to understanding how each piece of the services needs to be aligned and functioning properly. \n\n As a Data Engineer, I am responsible for generating large datasets for training machine learning models, primarily using satellite and street view images. I also integrate machine learning modules into APIs, such as SAM, to simplify data processing and analysis.",
@@ -133,7 +133,7 @@ const experiences = [
           "My kneolege in python and infrastura help me to integrate machine learning modules into APIs in explte the benefits of modeltes responses and improve the accuracy of the data.",
       },
       {
-        name: "Machine learning modeel integration",
+        name: "Machine learning model integrations",
         description:
           "My knowledge in Python and infrastructure helps me integrate machine learning modules into APIs, exploit the benefits of model responses, and improve data accuracy.",
       },
