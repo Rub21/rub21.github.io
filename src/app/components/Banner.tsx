@@ -40,7 +40,7 @@ const Banner = () => {
         transition={{ duration: 0.5, delay: 2.2 }}
         className="text-3xl md:text-4xl lgl:text-6xl font-titleFont font-semibold flex flex-col"
       >
-        Ruben L. Mendoza{" "}
+         Hi, I am Ruben{" "}
         <span className="text-lg md:text-2xl lg:text-3xl text-textDark mt-2 lgl:mt-4">
           <Typewriter options={options} />
         </span>
@@ -54,12 +54,23 @@ const Banner = () => {
         className="text-sm sml:text-base text-textDark font-medium"
       >
         {" "}
-        Hi, I am a Cloud and Data Engineer specializing in managing and processing
-        large geospatial datasets for machine learning and GIS applications. I
-        build scalable cloud infrastructures using Kubernetes and develop tools
-        and pipelines for efficient data processing. My expertise includes
-        geodata analysis, automation, and integrating machine learning models
-        into APIs.
+        I am a Cloud and Data Engineer with a focus on managing and
+        processing large geospatial datasets for machine learning and GIS
+        applications. I design and deploy scalable cloud infrastructures using
+        Kubernetes and create tools and pipelines that streamline data
+        processing workflows. My expertise spans geodata analysis, automation,
+        and the integration of machine learning models into APIs to enhance data
+        accuracy and efficiency. Additionally, I am the founder of{" "}
+        <Link
+          href="https://geocompas.ai"
+          className="text-textGreen hover:underline font-semibold"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GeoCompas
+        </Link>
+        , a company dedicated to generare training data for machine learning
+        models.
         <br />
         <br />
         <a href="https://www.linkedin.com/in/rub21/" target="_blank">
@@ -70,8 +81,8 @@ const Banner = () => {
           </span>
         </a>
       </motion.p>
-
-      <Link href="/project">
+      {/* <Link href="https://geocompas.ai">GeoCompas Founder</Link> */}
+      {/* <Link href="/project">
         <motion.button
           initial={{ opacity: 0.8 }}
           animate={{ opacity: 1 }}
@@ -80,7 +91,7 @@ const Banner = () => {
         >
           Check out my Projects
         </motion.button>
-      </Link>
+      </Link> */}
     </section>
   );
 };

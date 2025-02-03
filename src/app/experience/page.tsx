@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import SectionTitle from "../components/SectionTitle";
 import experiences from "../components/static/experiences";
 import WorkExperience from "./works/WorkExperience";
+import Link from "next/link";
 
 const Experience = () => {
   const [WorkGeoCompas, setWorkGeoCompas] = useState(true);
@@ -23,7 +24,7 @@ const Experience = () => {
           <div className="flex w-[fit-content] h-[fit-content] sml:flex-col ">
             <ul className="flex whitespace-nowrap max-sml:w-6/12 max-sml:overflow-x-scroll max-sml:no-scrollbar sml:h-auto sml:flex-col">
               {/* ======================= GeoCompas ======================= */}
-                      <li
+              <li
                 onClick={() => {
                   setWorkGeoCompas(true);
                   setWorkDevSeed(false);
@@ -37,12 +38,18 @@ const Experience = () => {
                     : "border-l-hoverColor : text-textDark"
                 } border-l-2 border-l-textGreen text-textDark bg-transparent hover:bg-[#112240] py-3 text-xs cursor-pointer duration-300 px-8 font-medium md:text-sm `}
               >
-                GeoCompas
+                <Link
+                  href="https://geocompas.ai"
+                  className="text-textGreen hover:underline font-semibold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GeoCompas
+                </Link>
                 <br />
                 <em>January 2024 - Present </em>
               </li>
-              
-              
+
               {/* ======================= Development Seed ======================= */}
               <li
                 onClick={() => {
@@ -58,7 +65,15 @@ const Experience = () => {
                     : "border-l-hoverColor : text-textDark"
                 } border-l-2 border-l-textGreen text-textDark bg-transparent hover:bg-[#112240] py-3 text-xs cursor-pointer duration-300 px-8 font-medium md:text-sm `}
               >
-                Development Seed
+               
+                <Link
+                  href="https://developmentseed.org"
+                  className="text-textGreen hover:underline font-semibold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Development Seed
+                </Link>
                 <br />
                 <em>January 2018 - January 2024 </em>
               </li>
@@ -78,7 +93,16 @@ const Experience = () => {
                     : "border-l-hoverColor : text-textDark"
                 } border-l-2 border-l-textGreen text-textDark bg-transparent hover:bg-[#112240] py-3 text-xs cursor-pointer duration-300 px-8 font-medium md:text-sm `}
               >
-                Mapbox (Manager)
+                <Link
+                  href="https://www.mapbox.com"
+                  className="text-textGreen hover:underline font-semibold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Mapbox (Manager)
+                </Link>
+
+                
                 <br />
                 <em>January 2017 - January 2018</em>
               </li>
@@ -98,7 +122,16 @@ const Experience = () => {
                     : "border-l-hoverColor : text-textDark"
                 } border-l-2 border-l-textGreen text-textDark bg-transparent hover:bg-[#112240] py-3 text-xs cursor-pointer duration-300 px-8 font-medium md:text-sm `}
               >
-                Space AG
+               
+                <Link
+                  href="https://www.spaceag.co"
+                  className="text-textGreen hover:underline font-semibold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                   Space AG
+                </Link>
+                
                 <br />
                 <em>June 2017 - August 2017</em>
               </li>
@@ -118,7 +151,14 @@ const Experience = () => {
                     : "border-l-hoverColor : text-textDark"
                 } border-l-2 border-l-textGreen text-textDark bg-transparent hover:bg-[#112240] py-3 text-xs cursor-pointer duration-300 px-8 font-medium md:text-sm `}
               >
-                Mapbox
+                  <Link
+                  href="https://www.mapbox.com"
+                  className="text-textGreen hover:underline font-semibold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Mapbox
+                </Link>
                 <br />
                 <em>January 2012 - January 2017</em>
               </li>
