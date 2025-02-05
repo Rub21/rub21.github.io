@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['user-images.githubusercontent.com', 'miro.medium.com', "cloud.githubusercontent.com"],
+    domains: ['user-images.githubusercontent.com', 'miro.medium.com', 'cloud.githubusercontent.com'],
   },
-  output: 'export'
-}
+  ...(isProd && { output: 'export' }),
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

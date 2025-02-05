@@ -14,6 +14,11 @@ function Navbar() {
   const ref = useRef<string | any>("");
   const [showMenu, setShowMenu] = useState(false);
 
+  const getLink = (path) => {
+    const isProd = process.env.NODE_ENV === "production";
+    return isProd ? `${path}.html` : path;
+  };
+
   function handleClick(e: any) {
     if (e.target.contains(ref.current)) {
       //do something with myRef
@@ -25,46 +30,46 @@ function Navbar() {
     <div className="w-full shadow-navbarShadow h-18 lg:h-[06vh] sticky top-0 z-50 bg-bodyColor px-4">
       <div className="max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between">
         <Link href="/">
-          <Image
+          {/* <Image
             className="pt-2 rounded-full sml:w-16 h-12 w-6"
             src={logo}
             alt="logo"
-          />
+          /> */}
         </Link>
 
         <div className="hidden mdl:inline-flex items-center gap-7">
           <ul className="flex text-[13] gap-7">
             {/* HOME */}
             <Link
-              href="/"
+              href={getLink("/")}
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
             >
               Home
             </Link>
             {/* ABOUT */}
             <Link
-              href="/about"
+              href={getLink("/about")}
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
             >
-              Skills
+              Skillls
             </Link>
             {/* EXPERIENCE */}
             <Link
-              href="/experience"
+              href={getLink("/experience")}
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
             >
               Experience
             </Link>
             {/* PROJECTS */}
             <Link
-              href="/project"
+              href={getLink("/project")}
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
             >
               Projects
             </Link>
             {/* CONTACT */}
             <Link
-              href="/contact"
+              href={getLink("/contact")}
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
             >
               Contact

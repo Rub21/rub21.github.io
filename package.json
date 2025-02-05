@@ -5,11 +5,11 @@
   "scripts": {
     "content": "rm -rf .contentlayer/ && yarn contentlayer build --verbose",
     "dev": "next dev",
-    "build": "yarn content && next build",
+    "build": "NODE_ENV=production yarn content && NODE_ENV=production next build",
     "start": "yarn content && next start",
     "clean": "rimraf build/",
     "lint": "next lint",
-    "deploy": "yarn content && yarn clean && PUBLIC_URL=/ REACT_APP_ENV=production yarn build && gh-pages -d out",
+    "deploy": "yarn content && yarn clean && PUBLIC_URL=/ REACT_APP_ENV=production  yarn build && gh-pages -d out",
     "prettier": "yarn content && yarn clean && prettier --write 'src/**/*.tsx'"
   },
   "dependencies": {
