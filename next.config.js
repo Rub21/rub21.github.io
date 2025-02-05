@@ -7,6 +7,9 @@ const nextConfig = {
     domains: ['user-images.githubusercontent.com', 'miro.medium.com', 'cloud.githubusercontent.com'],
   },
   ...(isProd && { output: 'export' }),
+  images: {
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig;

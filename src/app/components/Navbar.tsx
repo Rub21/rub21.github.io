@@ -16,7 +16,10 @@ function Navbar() {
 
   const getLink = (path: string): string => {
     const isProd = process.env.NODE_ENV === "production";
-    return isProd ? `${path}.html` : path;
+    if (isProd && path !== "/") {
+      return `${path}.html`;
+    }
+    return path;
   };
 
   function handleClick(e: any) {
