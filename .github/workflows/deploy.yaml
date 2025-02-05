@@ -5,7 +5,7 @@ on:
     branches:
       - "master"
 jobs:
-  rapid:
+  rub21_site:
     runs-on: ubuntu-latest
     steps:
       - name: Cancel Previous Runs
