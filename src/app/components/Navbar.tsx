@@ -46,7 +46,7 @@ function Navbar() {
               href="/about"
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
             >
-              About
+              Skills
             </Link>
             {/* EXPERIENCE */}
             <Link

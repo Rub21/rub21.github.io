@@ -19,7 +19,7 @@ const Experience = () => {
         id="Experience"
         className="max-w-containerSmall mx-auto flex flex-col gap-5 justify-center"
       >
-        <SectionTitle titleName="Work Experiences" />
+        <SectionTitle titleName="Where I have worked" titleNumber="" />
         <div className="w-full h-fit mt-5 flex flex-col sml:flex-row gap-4 ">
           <div className="flex w-[fit-content] h-[fit-content] sml:flex-col ">
             <ul className="flex whitespace-nowrap max-sml:w-6/12 max-sml:overflow-x-scroll max-sml:no-scrollbar sml:h-auto sml:flex-col">

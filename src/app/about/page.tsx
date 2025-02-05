@@ -34,19 +34,45 @@ const About = () => {
 
               <p>
                 <span>
-                  Hi! I’m a programmer, focused on building tools and pipelines
-                  to manage large amounts of vector data for machine learning
-                  and mapping projects. I work with geodata analysis,
-                  visualization, cloud infrastructure, DevOps, and full-stack
-                  development.
+                  Over the years, I have specialized in developing tools and
+                  pipelines to efficiently manage large volumes of vector data
+                  for machine learning and mapping projects. My work spans
+                  geospatial data analysis, visualization, cloud infrastructure,
+                  DevOps, and full-stack development.
                 </span>
                 <br />
                 <span>
-                  In my role as a cloud engineer, I manage and deploy scalable
-                  systems using Kubernetes for platforms like OpenHistoricalMap,
-                  OSM-US, and Palestine Maps. I also integrate machine learning
-                  models into APIs to make data processing easier and more
-                  accurate.
+                  As a cloud engineer, I design and deploy scalable systems
+                  using Kubernetes for platforms like{" "}
+                  <a
+                    href="https://www.openhistoricalmap.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-textGreen hover:underline font-medium"
+                  >
+                    OpenHistoricalMap
+                  </a>
+                  ,{" "}
+                  <a
+                    href="https://osmus.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-textGreen hover:underline font-medium"
+                  >
+                    OSM-US
+                  </a>
+                  , and{" "}
+                  <a
+                    href="https://palopenmaps.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-textGreen hover:underline font-medium"
+                  >
+                    Palestine Open Maps
+                  </a>
+                  . I also integrate machine learning models into APIs,
+                  streamlining data processing for enhanced accuracy and
+                  efficiency.
                 </span>
               </p>
             </div>
@@ -71,38 +97,29 @@ const About = () => {
             </div>
           </div>
 
-          {/* Skill Logo's */}
-          <div className="row-start-3 col-span-full pt-5 ">
-            <p className="pb-5 font-codeFont text-textDark font-bold text-left text-sm lg:text-base ">
-              My kills:
-            </p>
-
+          {/* Skills Section */}
+          <div className="row-start-3 col-span-full pt-5">
             {Skills.map((field, index) => (
-              <div key={index} className="flex flex-row items-center m-4">
-                <p className="pb-5 font-codeFont w-20 text-textDark font-bold text-left text-sm lg:text-base ml-3 mt-1">
+              <div key={index} className="flex flex-col m-4">
+                {/* Skill Category Name */}
+                <p className="pb-2 font-sans text-primary font-semibold text-left text-md lg:text-xl ml-3 tracking-wider uppercase">
                   {field.name}
                 </p>
-                <ul className="flex flex-row flex-wrap gap-4 ml-5 -mt-5 justify-center">
-                  {field && field.types
-                    ? field.types.map((type_, i) => {
-                        if (type_ && type_.src && type_.skill_name) {
-                          return (
-                            <li
-                              key={i}
-                              className="flex items-center gap-2 hover:-translate-y-2 transition-all duration-300"
-                            >
-                              <Image
-                                className="rounded-full w-11 max-sml:w-6 hover:contrast-150 hover:animate-pulse"
-                                src={type_.src}
-                                alt={type_.skill_name}
-                                title={type_.skill_name}
-                              />
-                            </li>
-                          );
-                        }
-                        return null;
-                      })
-                    : null}
+
+                {/* List of Skills as Text */}
+                <ul className="flex flex-wrap gap-4 ml-5">
+                  {field.types &&
+                    field.types.map(
+                      (type_, i) =>
+                        type_?.skill_name && (
+                          <li
+                            key={i}
+                            className="text-textGreen font-medium text-sm lg:text-base px-3 py-1 border border-textGreen rounded-full hover:text-white transition-all duration-300"
+                          >
+                            {type_?.skill_name}
+                          </li>
+                        )
+                    )}
                 </ul>
               </div>
             ))}
