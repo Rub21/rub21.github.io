@@ -14,7 +14,7 @@ function Navbar() {
   const ref = useRef<string | any>("");
   const [showMenu, setShowMenu] = useState(false);
 
-  const getLink = (path) => {
+  const getLink = (path: string): string => {
     const isProd = process.env.NODE_ENV === "production";
     return isProd ? `${path}.html` : path;
   };
